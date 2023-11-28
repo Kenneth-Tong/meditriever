@@ -3,10 +3,6 @@ import requests
 from dotenv import load_dotenv
 from flask import Flask
 
-from flask import Flask
-
-app = Flask(__name__)
-
 load_dotenv()
 
 FDA_API_KEY = os.getenv("FDA_API_KEY")  # Remember .env file!
