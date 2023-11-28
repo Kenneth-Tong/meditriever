@@ -14,7 +14,7 @@ app = Flask(__name__)
 
 @app.route("/")
 def app_get_drug():
-    return get_drug(FDA_API_KEY, "advil", 3)
+    return get_drug(FDA_API_KEY, "advil", 1)
 
 
 if __name__ == "__main__":
