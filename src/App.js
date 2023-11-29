@@ -1,6 +1,5 @@
 import React from 'react';
-import './app.py';
-import './Home.js'
+import Home from './Home.js';
 
 function App() {
   return (
