@@ -6,4 +6,5 @@ Email: String,
 Favorites: String[],
 Current_Drugs: String[],
 Past_Drugs: String[]}
+
 COMMIT;
