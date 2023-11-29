@@ -1,11 +1,10 @@
 import React from 'react';
+import Home from './Home';
 
 function App() {
   return (
-    null
+    <Home />
   );
 }
 
 export default App;
-
-
