@@ -1,5 +1,6 @@
 import React from 'react';
-import Home from './Home';
+import './app.py';
+import './Home.js'
 
 function App() {
   return (
@@ -8,3 +9,5 @@ function App() {
 }
 
 export default App;
+
+
