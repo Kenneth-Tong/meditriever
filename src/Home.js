@@ -3,11 +3,11 @@ import { Link } from 'react-router-dom'
 
 import Script from 'dangerous-html/react'
 
-import Feature from './Feature'
-import Offer from './Offer'
-import Location from './Location'
-import Guide from './Guide'
-import Article from './Article'
+import Feature from './components/Feature'
+import Offer from './components/Offer'
+import Location from './components/Location'
+import Guide from './components/Guide'
+import Article from './components/Article'
 
 const Home = (props) => {
   return (
