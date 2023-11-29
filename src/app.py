@@ -1,6 +1,8 @@
 import os
+import requests
 from dotenv import load_dotenv
-from flask import Flask
+from flask import Flask, jsonify
+
 
 from src.FDADrugAPI import get_drug
 from src.GoogleMapsAPI import get_id
