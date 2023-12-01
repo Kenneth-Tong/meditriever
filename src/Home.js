@@ -1,7 +1,7 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 
-import Script from 'dangerous-html/react'
+import Script from 'react-dangerous-html'
 
 import Feature from './components/Feature'
 import Offer from './components/Offer'
