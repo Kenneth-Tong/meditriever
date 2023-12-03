@@ -24,5 +24,4 @@ pip install Flask
 5.  Install React based files
 
 npm install react-router-dom
-
-
+npm i react-dangerous-html 
