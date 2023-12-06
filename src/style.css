@@ -130,7 +130,7 @@
 }
 .page-current {
   border-color: rgba(255, 255, 255, 0);
-  background-color: #ffffff;
+  background-color: #FAD87A;
 }
 .button-arrow {
   gap: var(--dl-space-space-unit);

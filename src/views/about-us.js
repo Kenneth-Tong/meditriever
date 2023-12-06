@@ -168,7 +168,7 @@ const AboutUs = (props) => {
             <div className="about-us-guide-wrapper1">
               <Guide
                 Location="Paris, France"
-                Portrait="https://play.teleporthq.io/static/svg/placeholders/no-image.svg"
+                Portrait="/Guides/guide-2.png"
                 rootClassName="guide-root-class-name3"
               ></Guide>
             </div>
@@ -177,7 +177,7 @@ const AboutUs = (props) => {
             <div className="about-us-guide-wrapper2">
               <Guide
                 Location="Bruges, Belgium"
-                Portrait="https://play.teleporthq.io/static/svg/placeholders/no-image.svg"
+                Portrait="/Guides/guide-3.png"
                 rootClassName="guide-root-class-name4"
               ></Guide>
             </div>
@@ -195,59 +195,80 @@ const AboutUs = (props) => {
       </section>
       <section className="about-us-footer">
         <div className="about-us-content">
-          <div className="about-us-container4">
-            <img
-              alt="image"
-              src="/Icons/mediritriever_logo_ideas-removebg-preview-300w.png"
-              className="about-us-image1"
-            />
-            <div className="about-us-main">
-              <div className="about-us-branding">
-                <div className="about-us-heading1"></div>
+          <div className="about-us-main">
+            <div className="about-us-branding">
+              <div className="about-us-heading1">
+                <img alt="image" src="/logo.svg" className="about-us-image1" />
+                <p className="about-us-caption1">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+                  do eiusmod tempor incididunt ut labore
+                </p>
               </div>
-              <div className="about-us-links1">
-                <div className="about-us-items">
-                  <button className="about-us-link button button-clean">
-                    <a href="#how-it-works" className="about-us-link1">
-                      <span>Create an Account</span>
-                      <br></br>
-                    </a>
-                  </button>
-                </div>
-                <div className="about-us-items1">
-                  <a
-                    href="#explore"
-                    className="about-us-link2 button button-clean"
-                  >
-                    <span>
-                      <span>Find a Medication</span>
-                      <span>Find a Medication</span>
-                      <br></br>
-                      <br></br>
-                    </span>
-                  </a>
-                </div>
-                <div className="about-us-items2">
-                  <a
-                    href="#about"
-                    className="about-us-link3 button button-clean"
-                  >
-                    <span>
-                      <span>About Us</span>
-                      <br></br>
-                    </span>
-                  </a>
-                </div>
+            </div>
+            <div className="about-us-links1">
+              <div className="about-us-items">
+                <button className="about-us-link button button-clean">
+                  Find a guide
+                </button>
+                <a
+                  href="#destinations"
+                  className="about-us-link01 button button-clean"
+                >
+                  Find a tour
+                </a>
+                <a
+                  href="#destinations"
+                  className="about-us-link02 button button-clean"
+                >
+                  Visit a city
+                </a>
+                <a
+                  href="#destinations"
+                  className="about-us-link03 button button-clean"
+                >
+                  Visit a country
+                </a>
+              </div>
+              <div className="about-us-items1">
+                <button className="about-us-link04 button button-clean">
+                  How it works
+                </button>
+                <button className="about-us-link05 button button-clean">
+                  Cancelation policy
+                </button>
+                <button className="about-us-link06 button button-clean">
+                  Local guides
+                </button>
+                <button className="about-us-link07 button button-clean">
+                  Affiliate
+                </button>
+              </div>
+              <div className="about-us-items2">
+                <button className="about-us-link08 button button-clean">
+                  About us
+                </button>
+                <button className="about-us-link09 button button-clean">
+                  Blog
+                </button>
+                <button className="about-us-link10 button button-clean">
+                  Partners
+                </button>
+                <button className="about-us-link11 button button-clean">
+                  Faqs
+                </button>
+                <button className="about-us-link12 button button-clean">
+                  Careers
+                </button>
               </div>
             </div>
           </div>
           <span className="about-us-copyright">
-            © 2023 Meditriever. All Rights Reserved.
+            © 2022 Character. All Rights Reserved.
           </span>
         </div>
       </section>
       <div>
-        <div className="about-us-container6">
+        <div className="about-us-container5">
           <Script
             html={`<script>
   function initAccordion() {

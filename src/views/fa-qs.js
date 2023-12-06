@@ -332,56 +332,80 @@ const FAQs = (props) => {
       </section>
       <section className="fa-qs-footer">
         <div className="fa-qs-content6">
-          <div className="fa-qs-container4">
-            <img
-              alt="image"
-              src="/Icons/mediritriever_logo_ideas-removebg-preview-300w.png"
-              className="fa-qs-image1"
-            />
-            <div className="fa-qs-main">
-              <div className="fa-qs-branding">
-                <div className="fa-qs-heading1"></div>
+          <div className="fa-qs-main">
+            <div className="fa-qs-branding">
+              <div className="fa-qs-heading1">
+                <img alt="image" src="/logo.svg" className="fa-qs-image1" />
+                <p className="fa-qs-caption1">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+                  do eiusmod tempor incididunt ut labore
+                </p>
               </div>
-              <div className="fa-qs-links1">
-                <div className="fa-qs-items">
-                  <button className="fa-qs-link button button-clean">
-                    <a href="#how-it-works" className="fa-qs-link1">
-                      <span>Create an Account</span>
-                      <br></br>
-                    </a>
-                  </button>
-                </div>
-                <div className="fa-qs-items1">
-                  <a
-                    href="#explore"
-                    className="fa-qs-link2 button button-clean"
-                  >
-                    <span>
-                      <span>Find a Medication</span>
-                      <span>Find a Medication</span>
-                      <br></br>
-                      <br></br>
-                    </span>
-                  </a>
-                </div>
-                <div className="fa-qs-items2">
-                  <a href="#about" className="fa-qs-link3 button button-clean">
-                    <span>
-                      <span>About Us</span>
-                      <br></br>
-                    </span>
-                  </a>
-                </div>
+            </div>
+            <div className="fa-qs-links1">
+              <div className="fa-qs-items">
+                <button className="fa-qs-link button button-clean">
+                  Find a guide
+                </button>
+                <a
+                  href="#destinations"
+                  className="fa-qs-link01 button button-clean"
+                >
+                  Find a tour
+                </a>
+                <a
+                  href="#destinations"
+                  className="fa-qs-link02 button button-clean"
+                >
+                  Visit a city
+                </a>
+                <a
+                  href="#destinations"
+                  className="fa-qs-link03 button button-clean"
+                >
+                  Visit a country
+                </a>
+              </div>
+              <div className="fa-qs-items1">
+                <button className="fa-qs-link04 button button-clean">
+                  How it works
+                </button>
+                <button className="fa-qs-link05 button button-clean">
+                  Cancelation policy
+                </button>
+                <button className="fa-qs-link06 button button-clean">
+                  Local guides
+                </button>
+                <button className="fa-qs-link07 button button-clean">
+                  Affiliate
+                </button>
+              </div>
+              <div className="fa-qs-items2">
+                <button className="fa-qs-link08 button button-clean">
+                  About us
+                </button>
+                <button className="fa-qs-link09 button button-clean">
+                  Blog
+                </button>
+                <button className="fa-qs-link10 button button-clean">
+                  Partners
+                </button>
+                <button className="fa-qs-link11 button button-clean">
+                  Faqs
+                </button>
+                <button className="fa-qs-link12 button button-clean">
+                  Careers
+                </button>
               </div>
             </div>
           </div>
           <span className="fa-qs-copyright">
-            © 2023 Meditriever. All Rights Reserved.
+            © 2022 Character. All Rights Reserved.
           </span>
         </div>
       </section>
       <div>
-        <div className="fa-qs-container6">
+        <div className="fa-qs-container5">
           <Script
             html={`<script>
   function initAccordion() {

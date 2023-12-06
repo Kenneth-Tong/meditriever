@@ -19,7 +19,7 @@ const Guide = (props) => {
 Guide.defaultProps = {
   Name: 'Miura Avaron',
   rootClassName: '',
-  Portrait: 'https://play.teleporthq.io/static/svg/placeholders/no-image.svg',
+  Portrait: '/Guides/guide-1.png',
   Location: 'Tokyo, Japan',
 }
 

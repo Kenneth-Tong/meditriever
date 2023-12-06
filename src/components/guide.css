@@ -55,9 +55,6 @@
 .guide-root-class-name8 {
   flex: 0 0 auto;
 }
-.guide-root-class-name9 {
-  align-self: center;
-}
 @media(max-width: 767px) {
   .guide-guide {
     gap: var(--dl-space-space-unit);
