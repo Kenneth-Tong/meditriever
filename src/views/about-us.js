@@ -153,41 +153,51 @@ const AboutUs = (props) => {
           </div>
         </div>
       </header>
-      <section id="about" className="about-us-about">
-        <div className="about-us-heading">
-          <h2 className="about-us-header">Meet Meditriever</h2>
-          <p className="about-us-caption">The founders of Meditriever</p>
+      <section id="about" className="home-about-us">
+        <div className="home-heading5">
+          <Link to="/about-us" className="home-navlink10">
+            <h2 className="home-header5">Meet Meditriever</h2>
+          </Link>
+          <p className="home-caption4">The founders of Meditriever</p>
         </div>
-        <div className="about-us-list">
+        <div className="home-list">
           <Link to="/">
-            <div className="about-us-guide-wrapper">
-              <Guide></Guide>
-            </div>
-          </Link>
-          <Link to="/">
-            <div className="about-us-guide-wrapper1">
+            <div className="home-guide-wrapper">
               <Guide
-                Location="Paris, France"
-                Portrait="/Guides/guide-2.png"
-                rootClassName="guide-root-class-name3"
+                Name="Kenneth Tong"
+                Location="Biology CMG, Computer Science 2025"
+                Portrait="/Guides/ken.jpg"
+                rootClassName="guide-root-class-name9"
               ></Guide>
             </div>
           </Link>
           <Link to="/">
-            <div className="about-us-guide-wrapper2">
+            <div className="home-guide-wrapper1">
               <Guide
-                Location="Bruges, Belgium"
-                Portrait="/Guides/guide-3.png"
-                rootClassName="guide-root-class-name4"
+                Name="Natalie Cheng"
+                Location="Computer Science, Anthropology 2025"
+                Portrait="/Guides/natalie.jpg"
+                rootClassName="guide-root-class-name2"
               ></Guide>
             </div>
           </Link>
           <Link to="/">
-            <div className="about-us-guide-wrapper3">
+            <div className="home-guide-wrapper2">
               <Guide
-                Location="London, UK "
-                Portrait="/Guides/guide-4.png"
-                rootClassName="guide-root-class-name5"
+                Location="Computer Science, EAP 2025"
+                Portrait="/Guides/aparna.jpg"
+                rootClassName="guide-root-class-name"
+                Name="Aparna Singh"
+              ></Guide>
+            </div>
+          </Link>
+          <Link to="/">
+            <div className="home-guide-wrapper3">
+              <Guide
+                Name="Katherine Zhang"
+                Location="BMB 2025"
+                Portrait="/Guides/kat.jpg"
+                rootClassName="guide-root-class-name1"
               ></Guide>
             </div>
           </Link>
@@ -268,78 +278,6 @@ const AboutUs = (props) => {
         </div>
       </section>
       <div>
-        <div className="about-us-container5">
-          <Script
-            html={`<script>
-  function initAccordion() {
-    /*
-    Accordion - Code Embed
-    */
-    const accordionContainers = document.querySelectorAll(
-      '[data-role="accordion-container"]'
-    ); // All accordion containers
-    const accordionContents = document.querySelectorAll(
-      '[data-role="accordion-content"]'
-    ); // All accordion content
-    const accordionIconsClosed = document.querySelectorAll(
-      '[data-role="accordion-icon-closed"]'
-    ); // All accordion closed icons
-    const accordionIconsOpen = document.querySelectorAll(
-      '[data-role="accordion-icon-open"]'
-    ); // All accordion open icons
-
-    accordionContents.forEach((accordionContent) => {
-      accordionContent.style.display = "none"; //Hides all accordion contents
-    });
-
-    accordionIconsClosed.forEach((icon) => {
-      icon.style.display = "flex";
-    });
-
-    accordionIconsOpen.forEach((icon) => {
-      icon.style.display = "none";
-    });
-
-    accordionContainers.forEach((accordionContainer, index) => {
-      if (accordionContainer.classList.contains("initialised")) {
-        return;
-      }
-
-      accordionContainer.classList.add("initiased");
-
-      accordionContainer.addEventListener("click", () => {
-        if (accordionContents[index].style.display === "flex") {
-          // If the accordion is already open, close it
-          accordionContents[index].style.display = "none";
-          accordionIconsClosed[index].style.display = "flex";
-          accordionIconsOpen[index].style.display = "none";
-        } else {
-          // If the accordion is closed, open it
-          accordionContents.forEach((accordionContent) => {
-            accordionContent.style.display = "none"; //Hides all accordion contents
-          });
-
-          accordionIconsClosed.forEach((accordionIcon) => {
-            accordionIcon.style.display = "flex"; // Resets all icon transforms to 0deg (default)
-          });
-
-          accordionIconsOpen.forEach((accordionIcon) => {
-            accordionIcon.style.display = "none";
-          });
-
-          accordionContents[index].style.display = "flex"; // Shows accordion content
-          accordionIconsClosed[index].style.display = "none"; // Rotates accordion icon 180deg
-          accordionIconsOpen[index].style.display = "flex";
-        }
-      });
-    });
-  }
-
-  initAccordion();
-</script>
-`}
-          ></Script>
-        </div>
       </div>
     </div>
   )

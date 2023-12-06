@@ -301,7 +301,7 @@ const Home = (props) => {
       </section>
       <section id="about" className="home-about-us">
         <div className="home-heading5">
-          <Link to="/about-us" className="home-navlink10">
+          <Link to="about-us">
             <h2 className="home-header5">Meet Meditriever</h2>
           </Link>
           <p className="home-caption4">The founders of Meditriever</p>

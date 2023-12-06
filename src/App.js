@@ -13,9 +13,9 @@ function App() {
       <nav>...</nav>
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="/AboutUs" element={<AboutUs />} /> 
+          <Route path="/about-us" element={<AboutUs />} /> 
           <Route path="/login-page" element={<LoginPage />} />
-          <Route path="/faqs" element={<FAQs />} />
+          <Route path="/fa-qs" element={<FAQs />} />
           <Route path="/404" element={<NotFound />} />
       </Routes>
   </div>
