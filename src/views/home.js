@@ -15,7 +15,14 @@ const Home = (props) => {
         <title>Traveler template</title>
         <meta property="og:title" content="Traveler template" />
       </Helmet>
-      <section className="home-intro">
+      <a href="#name" className="home-link">
+        <div className="home-go-to-top">
+          <svg viewBox="0 0 1024 1024" className="home-icon">
+            <path d="M316 658l-60-60 256-256 256 256-60 60-196-196z"></path>
+          </svg>
+        </div>
+      </a>
+      <section id="name" className="home-intro">
         <div className="home-home">
           <div className="home-video">
             <div className="home-tint">
@@ -33,26 +40,23 @@ const Home = (props) => {
                   <Link to="/" className="home-navlink">
                     <img
                       alt="image"
-                      src="/Icons/mediritriever_logo_ideas-removebg-preview-300w.png"
+                      src="/Icons/mediritriever_logo_ideas-removebg-preview-300h.png"
                       className="home-image1"
                     />
                   </Link>
                   <div className="home-buttons">
-                    <svg viewBox="0 0 1024 1024" className="home-icon">
+                    <svg viewBox="0 0 1024 1024" className="home-icon02">
                       <path d="M512 598q108 0 225 47t117 123v86h-684v-86q0-76 117-123t225-47zM512 512q-70 0-120-50t-50-120 50-121 120-51 120 51 50 121-50 120-120 50z"></path>
                     </svg>
-                    <button type="button" className="home-login button">
+                    <Link to="/login-page" className="home-login button">
                       Login
-                    </button>
-                    <button type="button" className="home-register button">
-                      Register
-                    </button>
+                    </Link>
                   </div>
                 </div>
               </div>
               <div data-thq="thq-burger-menu" className="home-menu">
                 <button className="home-hamburger button">
-                  <svg viewBox="0 0 1024 1024" className="home-icon02">
+                  <svg viewBox="0 0 1024 1024" className="home-icon04">
                     <path d="M128 554.667h768c23.552 0 42.667-19.115 42.667-42.667s-19.115-42.667-42.667-42.667h-768c-23.552 0-42.667 19.115-42.667 42.667s19.115 42.667 42.667 42.667zM128 298.667h768c23.552 0 42.667-19.115 42.667-42.667s-19.115-42.667-42.667-42.667h-768c-23.552 0-42.667 19.115-42.667 42.667s19.115 42.667 42.667 42.667zM128 810.667h768c23.552 0 42.667-19.115 42.667-42.667s-19.115-42.667-42.667-42.667h-768c-23.552 0-42.667 19.115-42.667 42.667s19.115 42.667 42.667 42.667z"></path>
                   </svg>
                 </button>
@@ -66,7 +70,7 @@ const Home = (props) => {
                   <div className="home-container2">
                     <img alt="logo" src="/logo.svg" className="home-logo" />
                     <div data-thq="thq-close-menu" className="home-menu-close">
-                      <svg viewBox="0 0 1024 1024" className="home-icon04">
+                      <svg viewBox="0 0 1024 1024" className="home-icon06">
                         <path d="M810 274l-238 238 238 238-60 60-238-238-238 238-60-60 238-238-238-238 60-60 238 238 238-238z"></path>
                       </svg>
                     </div>
@@ -90,19 +94,19 @@ const Home = (props) => {
                 <div className="home-icon-group">
                   <svg
                     viewBox="0 0 950.8571428571428 1024"
-                    className="home-icon06"
+                    className="home-icon08"
                   >
                     <path d="M925.714 233.143c-25.143 36.571-56.571 69.143-92.571 95.429 0.571 8 0.571 16 0.571 24 0 244-185.714 525.143-525.143 525.143-104.571 0-201.714-30.286-283.429-82.857 14.857 1.714 29.143 2.286 44.571 2.286 86.286 0 165.714-29.143 229.143-78.857-81.143-1.714-149.143-54.857-172.571-128 11.429 1.714 22.857 2.857 34.857 2.857 16.571 0 33.143-2.286 48.571-6.286-84.571-17.143-148-91.429-148-181.143v-2.286c24.571 13.714 53.143 22.286 83.429 23.429-49.714-33.143-82.286-89.714-82.286-153.714 0-34.286 9.143-65.714 25.143-93.143 90.857 112 227.429 185.143 380.571 193.143-2.857-13.714-4.571-28-4.571-42.286 0-101.714 82.286-184.571 184.571-184.571 53.143 0 101.143 22.286 134.857 58.286 41.714-8 81.714-23.429 117.143-44.571-13.714 42.857-42.857 78.857-81.143 101.714 37.143-4 73.143-14.286 106.286-28.571z"></path>
                   </svg>
                   <svg
                     viewBox="0 0 877.7142857142857 1024"
-                    className="home-icon08"
+                    className="home-icon10"
                   >
                     <path d="M585.143 512c0-80.571-65.714-146.286-146.286-146.286s-146.286 65.714-146.286 146.286 65.714 146.286 146.286 146.286 146.286-65.714 146.286-146.286zM664 512c0 124.571-100.571 225.143-225.143 225.143s-225.143-100.571-225.143-225.143 100.571-225.143 225.143-225.143 225.143 100.571 225.143 225.143zM725.714 277.714c0 29.143-23.429 52.571-52.571 52.571s-52.571-23.429-52.571-52.571 23.429-52.571 52.571-52.571 52.571 23.429 52.571 52.571zM438.857 152c-64 0-201.143-5.143-258.857 17.714-20 8-34.857 17.714-50.286 33.143s-25.143 30.286-33.143 50.286c-22.857 57.714-17.714 194.857-17.714 258.857s-5.143 201.143 17.714 258.857c8 20 17.714 34.857 33.143 50.286s30.286 25.143 50.286 33.143c57.714 22.857 194.857 17.714 258.857 17.714s201.143 5.143 258.857-17.714c20-8 34.857-17.714 50.286-33.143s25.143-30.286 33.143-50.286c22.857-57.714 17.714-194.857 17.714-258.857s5.143-201.143-17.714-258.857c-8-20-17.714-34.857-33.143-50.286s-30.286-25.143-50.286-33.143c-57.714-22.857-194.857-17.714-258.857-17.714zM877.714 512c0 60.571 0.571 120.571-2.857 181.143-3.429 70.286-19.429 132.571-70.857 184s-113.714 67.429-184 70.857c-60.571 3.429-120.571 2.857-181.143 2.857s-120.571 0.571-181.143-2.857c-70.286-3.429-132.571-19.429-184-70.857s-67.429-113.714-70.857-184c-3.429-60.571-2.857-120.571-2.857-181.143s-0.571-120.571 2.857-181.143c3.429-70.286 19.429-132.571 70.857-184s113.714-67.429 184-70.857c60.571-3.429 120.571-2.857 181.143-2.857s120.571-0.571 181.143 2.857c70.286 3.429 132.571 19.429 184 70.857s67.429 113.714 70.857 184c3.429 60.571 2.857 120.571 2.857 181.143z"></path>
                   </svg>
                   <svg
                     viewBox="0 0 602.2582857142856 1024"
-                    className="home-icon10"
+                    className="home-icon12"
                   >
                     <path d="M548 6.857v150.857h-89.714c-70.286 0-83.429 33.714-83.429 82.286v108h167.429l-22.286 169.143h-145.143v433.714h-174.857v-433.714h-145.714v-169.143h145.714v-124.571c0-144.571 88.571-223.429 217.714-223.429 61.714 0 114.857 4.571 130.286 6.857z"></path>
                   </svg>
@@ -117,28 +121,33 @@ const Home = (props) => {
                 </p>
               </div>
               <div className="home-border"></div>
+              <input
+                type="text"
+                placeholder="Search a medication"
+                className="home-textinput input"
+              />
               <div className="home-container4">
                 <div className="home-explore">
-                  <a href="#new" className="home-link button">
+                  <a href="#new" className="home-link01 button">
                     Add a New Prescription
                   </a>
-                  <a href="#new" className="home-link1 Heading">
+                  <a href="#new" className="home-link02 Heading">
                     New
                   </a>
                 </div>
                 <div className="home-new">
-                  <a href="#explore" className="home-link2 button">
+                  <a href="#explore" className="home-link03 button">
                     Explore Store Locations
                   </a>
-                  <a href="#explore" className="home-link3 Heading">
+                  <a href="#explore" className="home-link04 Heading">
                     Explore
                   </a>
                 </div>
                 <div className="home-about">
-                  <a href="#about" className="home-link4 button">
+                  <a href="#about" className="home-link05 button">
                     Learn more about us!
                   </a>
-                  <a href="#about" className="home-link5 Heading">
+                  <a href="#about" className="home-link06 Heading">
                     About Us
                   </a>
                 </div>
@@ -146,20 +155,12 @@ const Home = (props) => {
             </div>
           </div>
         </div>
-        <div id="features" className="home-feaures">
-          <div className="home-content1"></div>
-        </div>
+        <div className="home-boarder"></div>
       </section>
       <section id="new" className="home-popular-prescriptions">
         <div className="home-main">
           <div className="home-heading1">
-            <h2 className="home-header1">Popular Prescriptions</h2>
-          </div>
-          <div className="home-sorting">
-            <button className="home-option-primary button">All</button>
-            <button className="button-option button">Popular</button>
-            <button className="button-option button">Featured</button>
-            <button className="button-option button">Trending</button>
+            <h2 className="home-header1">Popular Medications</h2>
           </div>
         </div>
         <div className="home-offers">
@@ -212,7 +213,7 @@ const Home = (props) => {
         </div>
         <div className="home-pagination">
           <button className="home-previous button-option button">
-            <svg viewBox="0 0 1024 1024" className="home-icon12">
+            <svg viewBox="0 0 1024 1024" className="home-icon14">
               <path d="M658 708l-60 60-256-256 256-256 60 60-196 196z"></path>
             </svg>
             <span className="home-text05">Previous</span>
@@ -230,13 +231,16 @@ const Home = (props) => {
               </div>
             </div>
             <img alt="image" src="/Icons/more.svg" className="home-more" />
-            <div className="page">
-              <span className="home-text09">12</span>
+            <div className="home-max-number page">
+              <span className="home-text09">
+                <span>5</span>
+                <br></br>
+              </span>
             </div>
           </div>
           <button className="home-next button-option button">
-            <span className="home-text10">Next</span>
-            <svg viewBox="0 0 1024 1024" className="home-icon14">
+            <span className="home-text12">Next</span>
+            <svg viewBox="0 0 1024 1024" className="home-icon16">
               <path d="M426 256l256 256-256 256-60-60 196-196-196-196z"></path>
             </svg>
           </button>
@@ -244,14 +248,14 @@ const Home = (props) => {
       </section>
       <section id="how-it-works" className="home-new-user-create-account">
         <div className="home-highlight">
-          <div className="home-content2">
+          <div className="home-content1">
             <div className="home-heading2">
               <h2 className="home-header2">New User? </h2>
               <p className="home-caption1">Sign up for free!</p>
             </div>
             <button className="button-arrow button">
-              <span className="home-text11">Read more</span>
-              <span className="home-text12">&gt;</span>
+              <span className="home-text13">Read more</span>
+              <span className="home-text14">&gt;</span>
             </button>
           </div>
           <div className="home-image2">
@@ -277,7 +281,7 @@ const Home = (props) => {
               className="home-image4"
             />
           </div>
-          <div className="home-content3">
+          <div className="home-content2">
             <div className="home-heading4">
               <h2 className="home-header4">Need a medication?</h2>
               <p className="home-caption3">
@@ -288,7 +292,7 @@ const Home = (props) => {
                 <br></br>
               </p>
             </div>
-            <button className="home-find button">Find a local guide</button>
+            <button className="home-find button">Find </button>
           </div>
         </div>
       </section>
@@ -302,14 +306,20 @@ const Home = (props) => {
         <div className="home-list">
           <Link to="/">
             <div className="home-guide-wrapper">
-              <Guide></Guide>
+              <Guide
+                Name="Kenneth Tong"
+                Location="Biology CMG, Computer Science 2025"
+                Portrait="/Guides/guide-1-1500w.png"
+                rootClassName="guide-root-class-name9"
+              ></Guide>
             </div>
           </Link>
           <Link to="/">
             <div className="home-guide-wrapper1">
               <Guide
-                Location="Paris, France"
-                Portrait="/Guides/guide-2.png"
+                Name="Natalie Cheng"
+                Location="Computer Science 2025"
+                Portrait="/Guides/guide-2-1500w.png"
                 rootClassName="guide-root-class-name2"
               ></Guide>
             </div>
@@ -317,9 +327,10 @@ const Home = (props) => {
           <Link to="/">
             <div className="home-guide-wrapper2">
               <Guide
-                Location="Bruges, Belgium"
-                Portrait="/Guides/guide-3.png"
+                Location="Computer Science, EAP 2025"
+                Portrait="/Guides/guide-3-1500w.png"
                 rootClassName="guide-root-class-name"
+                Name="Aparna Singh"
               ></Guide>
             </div>
           </Link>
@@ -335,11 +346,11 @@ const Home = (props) => {
         </div>
       </section>
       <section className="home-footer">
-        <div className="home-content4">
+        <div className="home-content3">
           <div className="home-container6">
             <img
-              src="/Icons/mediritriever_logo_ideas-removebg-preview-300w.png"
               alt="image"
+              src="/Icons/mediritriever_logo_ideas-removebg-preview-300h.png"
               className="home-image5"
             />
             <div className="home-main1">
@@ -348,31 +359,45 @@ const Home = (props) => {
               </div>
               <div className="home-links">
                 <div className="home-items">
-                  <a
-                    href="#destinations"
-                    className="home-link6 button-clean button"
-                  >
-                    Find a tour
-                  </a>
+                  <button className="home-link07 button button-clean">
+                    <a href="#how-it-works" className="home-link08">
+                      <span>Create an Account</span>
+                      <br></br>
+                    </a>
+                    <Link to="/fa-qs" className="home-navlink15">
+                      <span>FAQs</span>
+                      <br></br>
+                    </Link>
+                  </button>
                 </div>
                 <div className="home-items1">
                   <a
-                    href="#how-it-works"
-                    className="home-link7 button-clean button"
+                    href="#explore"
+                    className="home-link09 button button-clean"
                   >
-                    How it works
+                    <span className="home-text21">
+                      <span>Your Closest Pharmacy</span>
+                      <br></br>
+                    </span>
+                    <span>
+                      <span>Find a Medication</span>
+                      <br></br>
+                    </span>
                   </a>
                 </div>
                 <div className="home-items2">
-                  <button className="home-link8 button button-clean">
-                    About us
-                  </button>
+                  <a href="#about" className="home-link10 button button-clean">
+                    <span>
+                      <span>About Us</span>
+                      <br></br>
+                    </span>
+                  </a>
                 </div>
               </div>
             </div>
           </div>
           <span className="home-copyright">
-            © 2022 Character. All Rights Reserved.
+            © 2023 Meditriever. All Rights Reserved.
           </span>
         </div>
       </section>
