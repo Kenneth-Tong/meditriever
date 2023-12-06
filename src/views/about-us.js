@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom'
 import Script from 'react-dangerous-html'
 import { Helmet } from 'react-helmet'
 
-import Guide from '../components/guide'
+import Guide from '../components/Guide'
 import './about-us.css'
 
 const AboutUs = (props) => {
