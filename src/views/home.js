@@ -51,6 +51,9 @@ const Home = (props) => {
                     <Link to="/login-page" className="home-login button">
                       Login
                     </Link>
+                    <button type="button" className="home-register button">
+                      Register
+                    </button>
                   </div>
                 </div>
               </div>
