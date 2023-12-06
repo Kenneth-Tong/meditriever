@@ -11,6 +11,11 @@ CREATE TABLE database_name.table_name(
    
 );
 
+CREATE TABLE history(
+   ID INT PRIMARY KEY   NOT NULL,
+
+);
+
 /*
 CREATE TABLE User_Data {First_Name: String,
 Last_Name: String,
