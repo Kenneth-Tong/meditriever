@@ -312,7 +312,7 @@ const Home = (props) => {
               <Guide
                 Name="Kenneth Tong"
                 Location="Biology CMG, Computer Science 2025"
-                Portrait="/Guides/guide-1-1500w.png"
+                Portrait="/Guides/ken.jpg"
                 rootClassName="guide-root-class-name9"
               ></Guide>
             </div>
@@ -321,8 +321,8 @@ const Home = (props) => {
             <div className="home-guide-wrapper1">
               <Guide
                 Name="Natalie Cheng"
-                Location="Computer Science 2025"
-                Portrait="/Guides/guide-2-1500w.png"
+                Location="Computer Science, Anthropology 2025"
+                Portrait="/Guides/natalie.jpg"
                 rootClassName="guide-root-class-name2"
               ></Guide>
             </div>
@@ -331,7 +331,7 @@ const Home = (props) => {
             <div className="home-guide-wrapper2">
               <Guide
                 Location="Computer Science, EAP 2025"
-                Portrait="/Guides/guide-3-1500w.png"
+                Portrait="/Guides/aparna.jpg"
                 rootClassName="guide-root-class-name"
                 Name="Aparna Singh"
               ></Guide>
@@ -340,8 +340,9 @@ const Home = (props) => {
           <Link to="/">
             <div className="home-guide-wrapper3">
               <Guide
-                Location="London, UK "
-                Portrait="/Guides/guide-4.png"
+                Name="Katherine Zhang"
+                Location="BMB 2025"
+                Portrait="/Guides/kat.jpg"
                 rootClassName="guide-root-class-name1"
               ></Guide>
             </div>
