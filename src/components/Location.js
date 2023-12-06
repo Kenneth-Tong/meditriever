@@ -2,60 +2,21 @@ import React from 'react'
 
 import PropTypes from 'prop-types'
 
+import './location.css'
+
 const Location = (props) => {
   return (
-    <div
-      style={{
-        flex: '1',
-        display: 'flex',
-        position: 'relative',
-        alignItems: 'center',
-        flexDirection: 'row',
-      }}
-    >
-      <img
-        alt="image"
-        src={props.Background}
-        style={{
-          flex: '1',
-          height: '400px',
-          objectFit: 'cover',
-        }}
-      />
-      <div
-        style={{
-          top: '0px',
-          flex: '1',
-          left: '0px',
-          right: '0px',
-          bottom: '0px',
-          height: '100%',
-          margin: 'auto',
-          display: 'flex',
-          position: 'absolute',
-          alignItems: 'center',
-          flexDirection: 'row',
-          justifyContent: 'center',
-        }}
-      >
-        <span
-          style={{
-            color: '#ffffff',
-            fontSize: '20px',
-            fontStyle: 'normal',
-            textAlign: 'center',
-            fontWeight: '700',
-          }}
-        >
-          {props.Location}
-        </span>
+    <div className="location-item">
+      <img alt="image" src={props.Background} className="location-background" />
+      <div className="location-content">
+        <span className="location-location">{props.Location}</span>
       </div>
     </div>
   )
 }
 
 Location.defaultProps = {
-  Background: '/destination-1-400h.png',
+  Background: 'https://play.teleporthq.io/static/svg/placeholders/no-image.svg',
   Location: 'Tokyo, Japan',
 }
 
