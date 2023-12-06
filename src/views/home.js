@@ -5,7 +5,7 @@ import Script from 'react-dangerous-html'
 import { Helmet } from 'react-helmet'
 
 import Offer from '../components/offer'
-import Guide from '../components/guide'
+import Guide from '../components/Guide'
 import './home.css'
 
 const Home = (props) => {
