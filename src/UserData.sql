@@ -1,3 +1,8 @@
+import sqlite3
+con = sqlite3.connect("UserData.db")
+
+cur = con.cursor()
+
 PRAGMA foreign_keys=OFF;
 BEGIN TRANSACTION;
 
