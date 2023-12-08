@@ -166,7 +166,21 @@ const LoginPage = (props) => {
           <p className="login-page-caption">
             Use Google to Login or sign in with your username and password
           </p>
-          <div className="login-page-accordion"></div>
+          <div className="login-page-accordion">
+          </div>
+          
+          <div class="col s12 m6 offset-m3 center-align">
+            <a class="oauth-container btn darken-4 white black-text" href="/users/google-oauth/">
+            <div class="left">
+            < img width="20px" alt="Google sign-in" 
+                src="/Guides/google.png" />
+            </div>
+          Login with Google
+            </a>
+          </div>
+          <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/css/materialize.min.css"></link>
+          <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/js/materialize.min.js"></script>
+          
         </div>
       </section>
       <section className="login-page-footer">
