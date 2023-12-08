@@ -2,7 +2,6 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 
 import Script from 'react-dangerous-html'
-import { Helmet } from 'react-helmet'
 
 import Offer from '../components/Offer'
 import Guide from '../components/Guide'
@@ -11,10 +10,6 @@ import './home.css'
 const Home = (props) => {
   return (
     <div className="home-container">
-      <Helmet>
-        <title>Traveler template</title>
-        <meta property="og:title" content="Traveler template" />
-      </Helmet>
       <a href="#name" className="home-link">
         <div className="home-go-to-top">
           <svg viewBox="0 0 1024 1024" className="home-icon">
@@ -37,7 +32,7 @@ const Home = (props) => {
             <header data-thq="thq-navbar" className="home-navbar">
               <div className="home-container1">
                 <div data-thq="thq-navbar-nav" className="home-desktop-menu">
-                  <Link to="/" className="home-navlink">
+                  <Link to="/home" className="home-navlink">
                     <img
                       alt="image"
                       src="/Icons/mediritriever_logo_ideas-removebg-preview-300h.png"
@@ -129,6 +124,12 @@ const Home = (props) => {
                 placeholder="Search a medication"
                 className="home-textinput input"
               />
+              <button name="Search" type="button" className="button">
+                <span>
+                  <span>Search</span>
+                  <br></br>
+                </span>
+              </button>
               <div className="home-container4">
                 <div className="home-explore">
                   <a href="#new" className="home-link01 button">
@@ -167,7 +168,7 @@ const Home = (props) => {
           </div>
         </div>
         <div className="home-offers">
-          <Link to="/">
+          <Link to="/home">
             <div className="home-offer-container">
               <Offer
                 Image="https://images.unsplash.com/photo-1632067694852-8386d261115a?ixid=M3w5MTMyMXwwfDF8c2VhcmNofDF8fHR5bGVub2x8ZW58MHx8fHwxNzAxMTM4MDE4fDA&amp;ixlib=rb-4.0.3&amp;w=1500"
@@ -177,7 +178,7 @@ const Home = (props) => {
               ></Offer>
             </div>
           </Link>
-          <Link to="/">
+          <Link to="/home">
             <div className="home-offer-container1">
               <Offer
                 Image="https://images.unsplash.com/photo-1675521005096-729123cd1dc8?ixid=M3w5MTMyMXwwfDF8c2VhcmNofDV8fGFkZGVyYWxsfGVufDB8fHx8MTcwMTEzODA0NXww&amp;ixlib=rb-4.0.3&amp;w=1500"
@@ -186,7 +187,7 @@ const Home = (props) => {
               ></Offer>
             </div>
           </Link>
-          <Link to="/">
+          <Link to="/home">
             <div className="home-offer-container2">
               <Offer
                 Image="https://images.unsplash.com/photo-1544991936-9464fa9919d2?ixid=M3w5MTMyMXwwfDF8c2VhcmNofDQ2fHxtZWRpY2luZXxlbnwwfHx8fDE3MDExMzg2OTB8MA&amp;ixlib=rb-4.0.3&amp;w=1500"
@@ -195,22 +196,22 @@ const Home = (props) => {
               ></Offer>
             </div>
           </Link>
-          <Link to="/">
+          <Link to="/home">
             <div className="home-offer-container3"></div>
           </Link>
-          <Link to="/">
+          <Link to="/home">
             <div className="home-offer-container4"></div>
           </Link>
-          <Link to="/">
+          <Link to="/home">
             <div className="home-offer-container5"></div>
           </Link>
-          <Link to="/">
+          <Link to="/home">
             <div className="home-offer-container6"></div>
           </Link>
-          <Link to="/">
+          <Link to="/home">
             <div className="home-offer-container7"></div>
           </Link>
-          <Link to="/">
+          <Link to="/home">
             <div className="home-offer-container8"></div>
           </Link>
         </div>
@@ -219,30 +220,30 @@ const Home = (props) => {
             <svg viewBox="0 0 1024 1024" className="home-icon14">
               <path d="M658 708l-60 60-256-256 256-256 60 60-196 196z"></path>
             </svg>
-            <span className="home-text05">Previous</span>
+            <span className="home-text08">Previous</span>
           </button>
           <div className="home-pages">
             <div className="home-primary">
               <div className="home-number-current page-current page">
-                <span className="home-text06">1</span>
+                <span className="home-text09">1</span>
               </div>
               <div className="page">
-                <span className="home-text07">2</span>
+                <span className="home-text10">2</span>
               </div>
               <div className="page home-number1">
-                <span className="home-text08">3</span>
+                <span className="home-text11">3</span>
               </div>
             </div>
-            <img alt="image" src="/Icons/more.svg" className="home-more" />
+            <img alt="image" src="/more.svg" className="home-more" />
             <div className="home-max-number page">
-              <span className="home-text09">
+              <span className="home-text12">
                 <span>5</span>
                 <br></br>
               </span>
             </div>
           </div>
           <button className="home-next button-option button">
-            <span className="home-text12">Next</span>
+            <span className="home-text15">Next</span>
             <svg viewBox="0 0 1024 1024" className="home-icon16">
               <path d="M426 256l256 256-256 256-60-60 196-196-196-196z"></path>
             </svg>
@@ -257,8 +258,8 @@ const Home = (props) => {
               <p className="home-caption1">Sign up for free!</p>
             </div>
             <button className="button-arrow button">
-              <span className="home-text13">Read more</span>
-              <span className="home-text14">&gt;</span>
+              <span className="home-text16">Read more</span>
+              <span className="home-text17">&gt;</span>
             </button>
           </div>
           <div className="home-image2">
@@ -280,7 +281,7 @@ const Home = (props) => {
           <div className="home-image3">
             <img
               alt="image"
-              src="/Highlights/highlight-2-1500w.png"
+              src="/highlight-2-1500w.png"
               className="home-image4"
             />
           </div>
@@ -307,7 +308,7 @@ const Home = (props) => {
           <p className="home-caption4">The founders of Meditriever</p>
         </div>
         <div className="home-list">
-          <Link to="/">
+          <Link to="/home">
             <div className="home-guide-wrapper">
               <Guide
                 Name="Kenneth Tong"
@@ -317,7 +318,7 @@ const Home = (props) => {
               ></Guide>
             </div>
           </Link>
-          <Link to="/">
+          <Link to="/home">
             <div className="home-guide-wrapper1">
               <Guide
                 Name="Natalie Cheng"
@@ -327,20 +328,21 @@ const Home = (props) => {
               ></Guide>
             </div>
           </Link>
-          <Link to="/">
+          <Link to="/home">
             <div className="home-guide-wrapper2">
               <Guide
+                Name="Aparna Singh"
                 Location="Computer Science, EAP 2025"
                 Portrait="/Guides/aparna.jpg"
                 rootClassName="guide-root-class-name"
-                Name="Aparna Singh"
               ></Guide>
             </div>
           </Link>
-          <Link to="/">
+          <Link to="/home">
             <div className="home-guide-wrapper3">
               <Guide
-                Location="Class of 2025"
+                Name="Katherine Zhang"
+                Location="BMB 2025"
                 Portrait="/Guides/kat.jpg"
                 rootClassName="guide-root-class-name1"
                 Name="Katherine Zhang"
@@ -379,7 +381,7 @@ const Home = (props) => {
                     href="#explore"
                     className="home-link09 button button-clean"
                   >
-                    <span className="home-text21">
+                    <span className="home-text24">
                       <span>Your Closest Pharmacy</span>
                       <br></br>
                     </span>

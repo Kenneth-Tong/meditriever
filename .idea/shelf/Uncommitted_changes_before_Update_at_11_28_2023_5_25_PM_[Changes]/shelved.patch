@@ -1,0 +1,16 @@
+Index: src/FDADrugAPI.py
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/FDADrugAPI.py b/src/FDADrugAPI.py
+--- a/src/FDADrugAPI.py	
++++ b/src/FDADrugAPI.py	
+@@ -1,7 +1,6 @@
+ import os
+ import requests
+ from dotenv import load_dotenv
+-from flask import Flask
+ 
+ load_dotenv()
+ 

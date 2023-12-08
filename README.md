@@ -25,3 +25,7 @@ pip install Flask
 
 npm install react-router-dom
 npm i react-dangerous-html 
+
+6. Install Helmet based files
+
+npm install --save react-helmet
