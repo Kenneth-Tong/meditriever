@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="e976ae58-763f-4542-906d-02cfc5f5a96e" name="Changes" comment="README Version 1 and Home.js Capitalized">
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectId" id="2YmRdc6hxTCk3ISqyrtGbutSbsD" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/ktpap/IdeaProjects/CS411ProjectGroup15&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;
+  }
+}</component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="e976ae58-763f-4542-906d-02cfc5f5a96e" name="Changes" comment="" />
+      <created>1701128856714</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1701128856714</updated>
+    </task>
+    <task id="LOCAL-00001" summary="Uploading API back end files (Version 0)">
+      <created>1701130801225</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1701130801226</updated>
+    </task>
+    <task id="LOCAL-00002" summary="Testing Flask Version 1">
+      <created>1701135299773</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1701135299773</updated>
+    </task>
+    <task id="LOCAL-00003" summary="Flask app_get_drug() confirmation (Version 1)">
+      <created>1701136505914</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1701136505914</updated>
+    </task>
+    <task id="LOCAL-00004" summary="Flask app_get_drug() confirmation (Version 1.1)">
+      <created>1701137058463</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1701137058463</updated>
+    </task>
+    <task id="LOCAL-00005" summary="Flask Google Maps and FDA integration Version 1">
+      <created>1701138416329</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1701138416329</updated>
+    </task>
+    <task id="LOCAL-00006" summary="Removed Flask from FDADrugAPI.py">
+      <created>1701210404507</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1701210404507</updated>
+    </task>
+    <task id="LOCAL-00007" summary="Removed Flask from FDADrugAPI.py">
+      <created>1701220017432</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1701220017432</updated>
+    </task>
+    <task id="LOCAL-00008" summary="Starting User Data.sql">
+      <created>1701220065262</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1701220065262</updated>
+    </task>
+    <task id="LOCAL-00009" summary="README Version 1 and Home.js Capitalized">
+      <created>1701226022591</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1701226022591</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
+    <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Uploading API back end files (Version 0)" />
+    <MESSAGE value="Testing Flask Version 1" />
+    <MESSAGE value="Flask app_get_drug() confirmation (Version 1)" />
+    <MESSAGE value="Flask app_get_drug() confirmation (Version 1.1)" />
+    <MESSAGE value="Flask Google Maps and FDA integration Version 1" />
+    <MESSAGE value="Removed Flask from FDADrugAPI.py" />
+    <MESSAGE value="Starting User Data.sql" />
+    <MESSAGE value="README Version 1 and Home.js Capitalized" />
+    <option name="LAST_COMMIT_MESSAGE" value="README Version 1 and Home.js Capitalized" />
+  </component>
+</project>

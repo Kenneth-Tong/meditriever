@@ -1,0 +1,22 @@
+Index: src/App.js
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>import React from 'react';\r\n\r\nfunction App() {\r\n  return (\r\n    null\r\n  );\r\n}\r\n\r\nexport default App;\r\n\r\n\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/App.js b/src/App.js
+--- a/src/App.js	(revision 3437d934fcb8d854a32b6deb48b008dd30fbf4ab)
++++ b/src/App.js	(date 1701221793170)
+@@ -1,8 +1,10 @@
+ import React from 'react';
++import './app.py';
++
+ 
+ function App() {
+   return (
+-    null
++    <h1> Hello World! </h1>
+   );
+ }
+ 

@@ -570,17 +570,17 @@
   border-color: rgba(0, 0, 0, 0);
   background-color: #1b9ce4;
 }
-.home-text06 {
+.home-text09 {
   font-style: normal;
   text-align: center;
   font-weight: 500;
 }
-.home-text07 {
+.home-text10 {
   font-style: normal;
   text-align: center;
   font-weight: 500;
 }
-.home-text08 {
+.home-text11 {
   font-style: normal;
   text-align: center;
   font-weight: 500;
@@ -593,7 +593,7 @@
   align-items: center;
   justify-content: center;
 }
-.home-text09 {
+.home-text12 {
   font-style: normal;
   text-align: center;
   font-weight: 500;
@@ -662,11 +662,11 @@
   font-family: "Karla";
   line-height: 27px;
 }
-.home-text13 {
+.home-text16 {
   font-style: normal;
   font-weight: 500;
 }
-.home-text14 {
+.home-text17 {
   font-style: normal;
   font-weight: 500;
 }
@@ -994,7 +994,7 @@
   position: relative;
   text-decoration: none;
 }
-.home-text21 {
+.home-text24 {
   right: -22px;
   bottom: -51px;
   position: absolute;
@@ -1283,7 +1283,7 @@
   .home-icon14 {
     display: flex;
   }
-  .home-text05 {
+  .home-text08 {
     display: none;
   }
   .home-number1 {
@@ -1292,7 +1292,7 @@
   .home-next {
     padding: var(--dl-space-space-halfunit);
   }
-  .home-text12 {
+  .home-text15 {
     display: none;
   }
   .home-icon16 {

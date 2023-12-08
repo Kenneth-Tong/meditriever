@@ -22,13 +22,13 @@ def return_response():
     json_list.append(app_get_id())
     return json_list
 
+@app.route("/drug")
+def app_get_drug(drug):
+    return get_drug(FDA_API_KEY, drug, 1)
 
-def app_get_drug():
-    return get_drug(FDA_API_KEY, "advil", 1)
-
-
-def app_get_id():
-    return get_id(GOOGLE_MAPS_API_KEY, "CVS")
+@app.route("/location")
+def app_get_id(location):
+    return get_id(GOOGLE_MAPS_API_KEY, location)
 
 
 if __name__ == "__main__":

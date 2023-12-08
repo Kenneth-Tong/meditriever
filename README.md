@@ -28,4 +28,4 @@ npm i react-dangerous-html
 
 6. Install Helmet based files
 
-npm install --save react- helmet
+npm install --save react-helmet
