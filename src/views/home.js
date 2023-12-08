@@ -345,7 +345,6 @@ const Home = (props) => {
                 Location="BMB 2025"
                 Portrait="/Guides/kat.jpg"
                 rootClassName="guide-root-class-name1"
-                Name="Katherine Zhang"
               ></Guide>
             </div>
           </Link>
