@@ -35,7 +35,7 @@ const Home = (props) => {
                   <Link to="/home" className="home-navlink">
                     <img
                       alt="image"
-                      src="/Icons/meditriever_logo.png"
+                      src="/Icons/mediritriever_logo_ideas-removebg-preview-300h.png"
                       className="home-image1"
                     />
                   </Link>
@@ -355,7 +355,7 @@ const Home = (props) => {
           <div className="home-container6">
             <img
               alt="image"
-              src="/Icons/meditriever_logo.png"
+              src="/Icons/mediritriever_logo_ideas-removebg-preview-300h.png"
               className="home-image5"
             />
             <div className="home-main1">
@@ -364,16 +364,20 @@ const Home = (props) => {
               </div>
               <div className="home-links">
                 <div className="home-items">
-                  <button className="home-link07 button button-clean">
+                  <Link to="/login-page">
                     <a href="#how-it-works" className="home-link08">
-                      <span>Create an Account</span>
+                      <span>
+                      <font color="white">Sign In</font>
+                      </span>
                       <br></br>
                     </a>
                     <Link to="/fa-qs" className="home-navlink15">
-                      <span>FAQs</span>
+                      <span>
+                        <font color="white">FAQs</font>
+                      </span>
                       <br></br>
                     </Link>
-                  </button>
+                  </Link>
                 </div>
                 <div className="home-items1">
                   <a
