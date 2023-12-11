@@ -20,7 +20,7 @@ const FAQs = (props) => {
               <Link to="/" className="fa-qs-navlink">
                 <img
                   alt="image"
-                  src="/Icons/mediritriever_logo_ideas-removebg-preview-300w.png"
+                  src="/Icons/meditriever_logo.png"
                   className="fa-qs-image"
                 />
               </Link>
@@ -329,77 +329,63 @@ const FAQs = (props) => {
           </div>
         </div>
       </section>
-      <section className="fa-qs-footer">
-        <div className="fa-qs-content6">
-          <div className="fa-qs-main">
-            <div className="fa-qs-branding">
-              <div className="fa-qs-heading1">
-                <img alt="image" src="/logo.svg" className="fa-qs-image1" />
-                <p className="fa-qs-caption1">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                  do eiusmod tempor incididunt ut labore
-                </p>
+      <section className="home-footer">
+        <div className="home-content3">
+          <div className="home-container6">
+            <img
+              alt="image"
+              src="/Icons/meditriever_logo.png"
+              className="home-image5"
+            />
+            <div className="home-main1">
+              <div className="home-branding">
+                <div className="home-heading6"></div>
               </div>
-            </div>
-            <div className="fa-qs-links1">
-              <div className="fa-qs-items">
-                <button className="fa-qs-link button button-clean">
-                  Find a guide
-                </button>
-                <a
-                  href="#destinations"
-                  className="fa-qs-link01 button button-clean"
-                >
-                  Find a tour
-                </a>
-                <a
-                  href="#destinations"
-                  className="fa-qs-link02 button button-clean"
-                >
-                  Visit a city
-                </a>
-                <a
-                  href="#destinations"
-                  className="fa-qs-link03 button button-clean"
-                >
-                  Visit a country
-                </a>
-              </div>
-              <div className="fa-qs-items1">
-                <button className="fa-qs-link04 button button-clean">
-                  How it works
-                </button>
-                <button className="fa-qs-link05 button button-clean">
-                  Cancelation policy
-                </button>
-                <button className="fa-qs-link06 button button-clean">
-                  Local guides
-                </button>
-                <button className="fa-qs-link07 button button-clean">
-                  Affiliate
-                </button>
-              </div>
-              <div className="fa-qs-items2">
-                <button className="fa-qs-link08 button button-clean">
-                  About us
-                </button>
-                <button className="fa-qs-link09 button button-clean">
-                  Blog
-                </button>
-                <button className="fa-qs-link10 button button-clean">
-                  Partners
-                </button>
-                <button className="fa-qs-link11 button button-clean">
-                  Faqs
-                </button>
-                <button className="fa-qs-link12 button button-clean">
-                  Careers
-                </button>
+              <div className="home-links">
+                <div className="home-items">
+                  <Link to="/login-page">
+                    <a href="#how-it-works" className="home-link08">
+                      <span>
+                      <font color="white">Sign In</font>
+                      </span>
+                      <br></br>
+                    </a>
+                    <Link to="/fa-qs" className="home-navlink15">
+                      <span>
+                        <font color="white">FAQs</font>
+                      </span>
+                      <br></br>
+                    </Link>
+                  </Link>
+                </div>
+                <div className="home-items1">
+                  <a
+                    href="#explore"
+                    className="home-link09 button button-clean"
+                  >
+                    <span className="home-text24">
+                      <span>Your Closest Pharmacy</span>
+                      <br></br>
+                    </span>
+                    <span>
+                      <span>Find a Medication</span>
+                      <br></br>
+                    </span>
+                  </a>
+                </div>
+                <div className="home-items2">
+                  <a href="#about" className="home-link10 button button-clean">
+                    <span>
+                      <span>About Us</span>
+                      <br></br>
+                    </span>
+                  </a>
+                </div>
               </div>
             </div>
           </div>
-          <span className="fa-qs-copyright">
-            © 2022 Character. All Rights Reserved.
+          <span className="home-copyright">
+            © 2023 Meditriever. All Rights Reserved.
           </span>
         </div>
       </section>

@@ -21,7 +21,7 @@ const AboutUs = (props) => {
               <Link to="/" className="about-us-navlink">
                 <img
                   alt="image"
-                  src="/Icons/mediritriever_logo_ideas-removebg-preview-300w.png"
+                  src="/Icons/meditriever_logo.png"
                   className="about-us-image"
                 />
               </Link>
