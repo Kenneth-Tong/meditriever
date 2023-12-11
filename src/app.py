@@ -36,16 +36,16 @@ def return_response():
     print(json_list)
     return json_list
 
-# @app.route("/drug")
+@app.route("/drug")
 def app_get_drug(drug):
     return get_drug(FDA_API_KEY, "adderall", 1)
 
-# @app.route("/location")
+@app.route("/location")
 def app_get_id(location):
     return get_id(GOOGLE_MAPS_API_KEY, location)
 
 
 if __name__ == "__main__":
-    app.run(port=5000)
+    app.run(port=3000)
     # db.create_all()
     app.run(debug=True)

@@ -15,12 +15,24 @@ const Create = () => {
             method: 'POST',
             headers: { "Content-Type": "application/json" },
             body: JSON.stringify(home)
-        }).then(res => {
-            console.log('new medication')
-            return res.json()
         })
-    };
+      };
 
+      try {
+        const response = await fetch('http://localhost:3000/drug', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify(formData),
+        });
+  
+        const data = await response.json();
+        console.log('Data from the backend:', data);
+      } catch (error) {
+        console.error('Error sending data to the backend:', error);
+      }
+    };
 
 return (
     <div className="create">
