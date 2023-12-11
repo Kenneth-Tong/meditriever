@@ -1,16 +1,16 @@
-.location-item {
+.drug-item {
   flex: 1;
   display: flex;
   position: relative;
   align-items: center;
   flex-direction: row;
 }
-.location-background {
+.drug-background {
   flex: 1;
   height: 400px;
   object-fit: cover;
 }
-.location-content {
+.drug-content {
   top: 0px;
   flex: 1;
   left: 0px;
@@ -24,7 +24,7 @@
   flex-direction: row;
   justify-content: center;
 }
-.location-location {
+.drug-drug {
   color: #ffffff;
   font-size: 20px;
   font-style: normal;

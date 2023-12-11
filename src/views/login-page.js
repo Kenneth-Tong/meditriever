@@ -147,7 +147,6 @@ const LoginPage = (props) => {
             </svg>
           </div>
         </div>
-        <div><h2>hello</h2></div>
       </header>
       <a href="#new" className="login-page-link button">
         Add a New Prescription
