@@ -35,7 +35,7 @@ const Home = (props) => {
                   <Link to="/home" className="home-navlink">
                     <img
                       alt="image"
-                      src="/Icons/mediritriever_logo_ideas-removebg-preview-300h.png"
+                      src="/Icons/meditriever_logo.png"
                       className="home-image1"
                     />
                   </Link>
@@ -355,7 +355,7 @@ const Home = (props) => {
           <div className="home-container6">
             <img
               alt="image"
-              src="/Icons/mediritriever_logo_ideas-removebg-preview-300h.png"
+              src="/Icons/meditriever_logo.png"
               className="home-image5"
             />
             <div className="home-main1">
