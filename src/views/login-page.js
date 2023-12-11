@@ -9,10 +9,6 @@ import './login-page.css'
 const LoginPage = (props) => {
   return (
     <div className="login-page-container">
-      <Helmet>
-        <title>Login-Page - Traveler template</title>
-        <meta property="og:title" content="Login-Page - Traveler template" />
-      </Helmet>
       <header data-thq="thq-navbar" className="login-page-navbar">
         <div className="login-page-container1">
           <header
