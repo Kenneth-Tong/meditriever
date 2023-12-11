@@ -32,9 +32,6 @@ const AboutUs = (props) => {
                 <button type="button" className="about-us-login button">
                   Login
                 </button>
-                <button type="button" className="about-us-register button">
-                  Register
-                </button>
               </div>
             </div>
             <div data-thq="thq-burger-menu" className="about-us-burger-menu">

@@ -124,7 +124,6 @@ const FAQs = (props) => {
             </nav>
             <div className="fa-qs-container3">
               <button className="fa-qs-login2 button">Login</button>
-              <button className="button">Register</button>
             </div>
           </div>
           <div className="fa-qs-icon-group1">

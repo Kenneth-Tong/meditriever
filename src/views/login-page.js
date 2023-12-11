@@ -30,9 +30,6 @@ const LoginPage = (props) => {
                 <button type="button" className="login-page-login button">
                   Login
                 </button>
-                <button type="button" className="login-page-register button">
-                  Register
-                </button>
               </div>
             </div>
             <div data-thq="thq-burger-menu" className="login-page-burger-menu">
