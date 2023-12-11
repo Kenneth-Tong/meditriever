@@ -15,10 +15,11 @@ const Create = () => {
             method: 'POST',
             headers: { "Content-Type": "application/json" },
             body: JSON.stringify(home)
-        }).then(() => {
+        }).then(res => {
             console.log('new medication')
+            return res.json()
         })
-    }
+    };
 
 
 return (
