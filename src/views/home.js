@@ -114,7 +114,7 @@ const Home = (props) => {
             <div className="home-center">
               <div className="home-heading">
                 <h1 className="home-header">Meditriever</h1>
-                <p class="py-4" className="home-caption">
+                <p class="py-4">
                   Fetch, retrieve, and store medications you need.   
                 </p>
               </div>
