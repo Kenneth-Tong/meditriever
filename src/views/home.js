@@ -256,8 +256,14 @@ const Home = (props) => {
               <p className="home-caption1">Sign up for free!</p>
             </div>
             <button className="button-arrow button">
-              <span className="home-text16">Read more</span>
-              <span className="home-text17">&gt;</span>
+
+            <Link to="/login-page">
+              <a href="#how-it-works" className="home-link08">
+                <span className="home-text16">Read more</span>
+                <br></br>
+              </a>
+            </Link>
+            
             </button>
           </div>
           <div className="home-image2">

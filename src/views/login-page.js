@@ -179,45 +179,52 @@ const LoginPage = (props) => {
           
         </div>
       </section>
-      <section className="login-page-footer">
-        <div className="login-page-content1">
-          <div className="login-page-container4">
+      <section className="home-footer">
+        <div className="home-content3">
+          <div className="home-container6">
             <img
               alt="image"
-              src="/Icons/mediritriever_logo_ideas-removebg-preview-300w.png"
-              className="login-page-image1"
+              src="/Icons/meditriever_logo.png"
+              className="home-image5"
             />
-            <div className="login-page-main">
-              <div className="login-page-branding">
-                <div className="login-page-heading1"></div>
+            <div className="home-main1">
+              <div className="home-branding">
+                <div className="home-heading6"></div>
               </div>
-              <div className="login-page-links1">
-                <div className="login-page-items">
-                  <button className="login-page-link1 button button-clean">
-                    <a href="#how-it-works" className="login-page-link2">
-                      <span>Create an Account</span>
+              <div className="home-links">
+                <div className="home-items">
+                  <Link to="/login-page">
+                    <a href="#how-it-works" className="home-link08">
+                      <span>
+                      <font color="white">Sign In</font>
+                      </span>
                       <br></br>
                     </a>
-                  </button>
+                    <Link to="/fa-qs" className="home-navlink15">
+                      <span>
+                        <font color="white">FAQs</font>
+                      </span>
+                      <br></br>
+                    </Link>
+                  </Link>
                 </div>
-                <div className="login-page-items1">
+                <div className="home-items1">
                   <a
                     href="#explore"
-                    className="login-page-link3 button button-clean"
+                    className="home-link09 button button-clean"
                   >
+                    <span className="home-text24">
+                      <span>Your Closest Pharmacy</span>
+                      <br></br>
+                    </span>
                     <span>
                       <span>Find a Medication</span>
-                      <span>Find a Medication</span>
-                      <br></br>
                       <br></br>
                     </span>
                   </a>
                 </div>
-                <div className="login-page-items2">
-                  <a
-                    href="#about"
-                    className="login-page-link4 button button-clean"
-                  >
+                <div className="home-items2">
+                  <a href="#about" className="home-link10 button button-clean">
                     <span>
                       <span>About Us</span>
                       <br></br>
@@ -227,7 +234,7 @@ const LoginPage = (props) => {
               </div>
             </div>
           </div>
-          <span className="login-page-copyright">
+          <span className="home-copyright">
             © 2023 Meditriever. All Rights Reserved.
           </span>
         </div>
