@@ -19,14 +19,6 @@ const Offer = (props) => {
   )
 }
 
-Offer.defaultProps = {
-  Image: 'https://play.teleporthq.io/static/svg/placeholders/no-image.svg',
-  Guides: '3 Local guides',
-  Description:
-    'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.',
-  Location: 'Crete, Greece',
-}
-
 Offer.propTypes = {
   Image: PropTypes.string,
   Guides: PropTypes.string,
