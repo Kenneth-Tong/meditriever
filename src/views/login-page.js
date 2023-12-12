@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import Login from '../components/login'; // Import the Login component
+import Logout from '../components/logout'; //Import the Logout component
 
 import Script from 'react-dangerous-html'
 import { Helmet } from 'react-helmet'
@@ -96,7 +97,6 @@ function LoginPage() {
                 </nav>
                 <div className="login-page-buttons1">
                   <button className="login-page-login1 button">Login</button>
-                  <button className="button">Register</button>
                 </div>
               </div>
               <div>
@@ -211,14 +211,8 @@ function LoginPage() {
           </div>
           
           <div class="col s12 m6 offset-m3 center-align">
-            <a class="oauth-container btn darken-4 white black-text" href="/users/google-oauth/">
-            <div class="left">
-            < img width="20px" alt="Google sign-in" 
-                src="/Guides/google.png" />
-            </div>
-          Login with Google
-            </a>
             <Login />
+            <Logout />
           </div>
           <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/css/materialize.min.css"></link>
           <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/js/materialize.min.js"></script>
