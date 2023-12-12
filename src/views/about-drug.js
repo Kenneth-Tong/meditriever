@@ -2,10 +2,10 @@ import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom'; // Import useParams
 
 import './about-drug.css';
-import Create from '../Create';
+import Create from '../Create'; // Import Create component
 
 const AboutDrug = () => {
-  const { drugName } = useParams();
+  const { drugName } = useParams(); // Use useParams to get drugName from URL
   const [drugData, setDrugData] = useState(null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);

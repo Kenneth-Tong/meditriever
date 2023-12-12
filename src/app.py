@@ -76,7 +76,6 @@ def add_data():
     return jsonify({'message': 'Data received and processed successfully'})
 
 
-
 '''
 FDA API + Google Maps API
 '''
@@ -91,19 +90,25 @@ GOOGLE_MAPS_API_KEY = os.getenv("GOOGLE_MAPS_API_KEY")  # Remember .env file!
 
 # app = Flask(__name__)
 
+from src.FDADrugAPI import get_drug
+
 @app.route("/about-drug", methods=['POST'])
-def handle_user_data(drug):
+def handle_user_data():
     if request.method == 'POST':
         # Get the data from the JSON body of the request
         data = request.get_json()
         
-        # Access the parameters sent from the frontend
         drug_name = data.get('drug')
-        effects = ""
-        company_name = ""
-        purpose = ""
-        contents = ""
-        howTo = ""
+        
+        # Call get_drug function to retrieve drug information
+        drug_data = get_drug(FDA_API_KEY, drug_name, 1)
+        
+        # Extract relevant information from the returned JSON
+        effects = drug_data.get('effects', "")
+        company_name = drug_data.get('companyName', "")
+        purpose = drug_data.get('purpose', "")
+        contents = drug_data.get('contents', "")
+        howTo = drug_data.get('howTo', "")
         
         # Perform any necessary backend processing with the received data
         response_data = {
@@ -119,9 +124,6 @@ def handle_user_data(drug):
         # Return the response as JSON
         return jsonify(response_data)
 
-@app.route("/drug")
-def app_get_drug(drug):
-    return get_drug(FDA_API_KEY, "adderall", 1)
 
 @app.route("/location")
 def app_get_id(location):

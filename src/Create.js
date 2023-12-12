@@ -9,7 +9,7 @@ const Create = ({ drugName }) => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    const medicationData = { drugName, effects, companyName, purpose, contents, howTo };
+    const medicationData = { drugName, effects, companyName, contents, howTo };
 
     try {
       const response = await fetch('http://localhost:3000/about-drug', {
