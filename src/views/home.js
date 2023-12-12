@@ -176,7 +176,7 @@ const Home = (props) => {
               ></Offer>
             </div>
           </Link>
-          <Link to="/about-drug">
+          <Link to="/about-drug/adderall">
             <div className="home-offer-container1">
               <Offer
                 Image="https://images.unsplash.com/photo-1675521005096-729123cd1dc8?ixid=M3w5MTMyMXwwfDF8c2VhcmNofDV8fGFkZGVyYWxsfGVufDB8fHx8MTcwMTEzODA0NXww&amp;ixlib=rb-4.0.3&amp;w=1500"

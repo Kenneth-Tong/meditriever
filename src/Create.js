@@ -1,15 +1,15 @@
-import { useState } from "react";
+import React, { useState } from 'react';
 
-const Create = () => {
-  const [drugName, medication] = useState('');
-  const [effects, symptoms] = useState('');
-  const [companyName, company] = useState('');
-  const [contents, ingredients] = useState('');
-  const [howTo, intake] = useState('');
+const Create = ({ drugName }) => {
+  const [effects, setEffects] = useState('');
+  const [companyName, setCompanyName] = useState('');
+  const [contents, setContents] = useState('');
+  const [howTo, setHowTo] = useState('');
+  const [purpose, setPurpose] = useState('');
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    const medicationData = { drugName, effects, companyName, contents, howTo };
+    const medicationData = { drugName, effects, companyName, purpose, contents, howTo };
 
     try {
       const response = await fetch('http://localhost:3000/about-drug', {
@@ -27,44 +27,51 @@ const Create = () => {
     }
   };
 
-return (
+  return (
     <div className="create">
       <h2>Medication Information</h2>
       <form onSubmit={handleSubmit}>
         <label>Medication Name:</label>
-        <h2
-          type="text" 
-          required 
+        <input
+          type="text"
+          required
           value={drugName}
-          onChange={(e) => medication(e.target.value)}
+          onChange={() => {}} // Placeholder onChange to avoid warnings
         />
         <div></div>
         <label>Company:</label>
-        <h2
+        <input
           required
           value={companyName}
-          onChange={(e) => company(e.target.value)}
+          onChange={(e) => setCompanyName(e.target.value)}
         />
         <div></div>
-         <label>Symptoms:</label>
-        <h2
+        <label>Symptoms:</label>
+        <input
           required
           value={effects}
-          onChange={(e) => symptoms(e.target.value)}
+          onChange={(e) => setEffects(e.target.value)}
+        />
+        <div></div>
+        <label>Purpose:</label>
+        <input
+          required
+          value={purpose}
+          onChange={(e) => setPurpose(e.target.value)}
         />
         <div></div>
         <label>Contents:</label>
-        <h2
+        <input
           required
           value={contents}
-          onChange={(e) => ingredients(e.target.value)}
+          onChange={(e) => setContents(e.target.value)}
         />
         <div></div>
         <label>Intake:</label>
-        <h2
+        <input
           required
           value={howTo}
-          onChange={(e) => intake(e.target.value)}
+          onChange={(e) => setHowTo(e.target.value)}
         />
         <div></div>
         <button>Add Medication</button>
@@ -72,5 +79,5 @@ return (
     </div>
   );
 }
- 
+
 export default Create;

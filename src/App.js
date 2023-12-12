@@ -14,7 +14,7 @@ function App() {
       <nav>...</nav>
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="/about-drug" element={<AboutDrug />} />
+          <Route path="/about-drug/:drugName" element={<AboutDrug />} component={AboutDrug} />
           <Route path="/about-us" element={<AboutUs />} /> 
           <Route path="/login-page" element={<LoginPage />} />
           <Route path="/fa-qs" element={<FAQs />} />
