@@ -1,38 +1,31 @@
 import { useState } from "react";
 
 const Create = () => {
-    const[drugName, medication] = useState('');
-    const[effects, symptoms] = useState('');
-    const[companyName, company] = useState('');
-    const[contents, ingredients] = useState('');
-    const[howTo, intake] = useState('');
+  const [drugName, medication] = useState('');
+  const [effects, symptoms] = useState('');
+  const [companyName, company] = useState('');
+  const [contents, ingredients] = useState('');
+  const [howTo, intake] = useState('');
 
-    const handleSubmit = (e) => {
-        e.preventDefault();
-        const home = { drugName, effects, companyName, contents, howTo };
-        
-        fetch('http://localhost:3000/drug', {
-            method: 'POST',
-            headers: { "Content-Type": "application/json" },
-            body: JSON.stringify(home)
-        })
-      };
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    const medicationData = { drugName, effects, companyName, contents, howTo };
 
-      try {
-        const response = await fetch('http://localhost:3000/drug', {
-          method: 'POST',
-          headers: {
-            'Content-Type': 'application/json',
-          },
-          body: JSON.stringify(formData),
-        });
-  
-        const data = await response.json();
-        console.log('Data from the backend:', data);
-      } catch (error) {
-        console.error('Error sending data to the backend:', error);
-      }
-    };
+    try {
+      const response = await fetch('http://localhost:3000/about-drug', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(medicationData),
+      });
+
+      const data = await response.json();
+      console.log('Data from the backend:', data);
+    } catch (error) {
+      console.error('Error sending data to the backend:', error);
+    }
+  };
 
 return (
     <div className="create">

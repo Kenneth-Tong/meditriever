@@ -1,10 +1,14 @@
 import React from 'react'
 import './about-drug.css'
+import Create from '../Create'
 
 const AboutDrug = (props) => {
   return (
     <h1>
-      hi
+      <Create />
+      <script>
+        
+      </script>
     </h1>
   )
 }
