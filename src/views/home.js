@@ -176,7 +176,7 @@ const Home = (props) => {
             </div>
           </Link>
           <Link to="/about-drug/adderall">
-            <div className="home-offer-container1">
+            <div className="home-offer-container">
               <Offer
                 Image="https://images.unsplash.com/photo-1675521005096-729123cd1dc8?ixid=M3w5MTMyMXwwfDF8c2VhcmNofDV8fGFkZGVyYWxsfGVufDB8fHx8MTcwMTEzODA0NXww&amp;ixlib=rb-4.0.3&amp;w=1500"
                 Guides="Adderall common side-effects"
@@ -185,31 +185,13 @@ const Home = (props) => {
             </div>
           </Link>
           <Link to="/about-drug">
-            <div className="home-offer-container2">
+            <div className="home-offer-container">
               <Offer
                 Image="https://images.unsplash.com/photo-1544991936-9464fa9919d2?ixid=M3w5MTMyMXwwfDF8c2VhcmNofDQ2fHxtZWRpY2luZXxlbnwwfHx8fDE3MDExMzg2OTB8MA&amp;ixlib=rb-4.0.3&amp;w=1500"
                 Guides="x common side-effects"
                 Location="Prozac"
               ></Offer>
             </div>
-          </Link>
-          <Link to="/home">
-            <div className="home-offer-container3"></div>
-          </Link>
-          <Link to="/home">
-            <div className="home-offer-container4"></div>
-          </Link>
-          <Link to="/home">
-            <div className="home-offer-container5"></div>
-          </Link>
-          <Link to="/home">
-            <div className="home-offer-container6"></div>
-          </Link>
-          <Link to="/home">
-            <div className="home-offer-container7"></div>
-          </Link>
-          <Link to="/home">
-            <div className="home-offer-container8"></div>
           </Link>
         </div>
         <div className="home-pagination">
