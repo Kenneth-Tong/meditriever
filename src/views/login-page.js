@@ -1,12 +1,15 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
+import Login from './login'; // Import the Login component
 
 import Script from 'react-dangerous-html'
 import { Helmet } from 'react-helmet'
 
 import './login-page.css'
 
-const LoginPage = (props) => {
+function LoginPage() {
+
+//const LoginPage = (props) => {
 
   const [username, setUsername] = useState('');
   const [email, setEmail] = useState('');
@@ -215,6 +218,7 @@ const LoginPage = (props) => {
             </div>
           Login with Google
             </a>
+            <Login />
           </div>
           <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/css/materialize.min.css"></link>
           <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/js/materialize.min.js"></script>

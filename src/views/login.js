@@ -11,17 +11,20 @@ function Login (){
     const onFailure = (res) => {
         console.log("Login Failed :( res: ", res);
     }
-
-    <div id = "signInButton">
-        <GoogleLogin
-            clientId={clientID}
-            buttonText="Login"
-            onSuccess={onSuccess}
-            onFailure={onFailure}
-            cookiePolicy={'single_host_origin'}
-            isSignedIn={true}
+    
+    return(
+        <div id = "signInButton">
+            <GoogleLogin
+                clientId={clientID}
+                buttonText="Login"
+                onSuccess={onSuccess}
+                onFailure={onFailure}
+                cookiePolicy={'single_host_origin'}
+                isSignedIn={true}
         />
     </div>
+    )
+    
 }
 
-export default Login
+export default Login;
