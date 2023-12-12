@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import Login from './login'; // Import the Login component
+import Login from '../components/login'; // Import the Login component
 
 import Script from 'react-dangerous-html'
 import { Helmet } from 'react-helmet'
