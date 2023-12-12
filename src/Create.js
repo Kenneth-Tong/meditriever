@@ -29,39 +29,44 @@ const Create = () => {
 
 return (
     <div className="create">
-      <h2>Medication</h2>
+      <h2>Medication Information</h2>
       <form onSubmit={handleSubmit}>
-        <label>Medication Name</label>
-        <input 
+        <label>Medication Name:</label>
+        <h2
           type="text" 
           required 
           value={drugName}
           onChange={(e) => medication(e.target.value)}
         />
-        <label>Symptoms:</label>
-        <textarea
-          required
-          value={effects}
-          onChange={(e) => symptoms(e.target.value)}
-        ></textarea>
+        <div></div>
         <label>Company:</label>
-        <textarea
+        <h2
           required
           value={companyName}
           onChange={(e) => company(e.target.value)}
-        ></textarea>
+        />
+        <div></div>
+         <label>Symptoms:</label>
+        <h2
+          required
+          value={effects}
+          onChange={(e) => symptoms(e.target.value)}
+        />
+        <div></div>
         <label>Contents:</label>
-        <textarea
+        <h2
           required
           value={contents}
           onChange={(e) => ingredients(e.target.value)}
-        ></textarea>
+        />
+        <div></div>
         <label>Intake:</label>
-        <textarea
+        <h2
           required
           value={howTo}
           onChange={(e) => intake(e.target.value)}
-        ></textarea>
+        />
+        <div></div>
         <button>Add Medication</button>
       </form>
     </div>
