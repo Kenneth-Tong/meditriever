@@ -6,9 +6,6 @@ const AboutDrug = (props) => {
   return (
     <h1>
       <Create />
-      <script>
-        
-      </script>
     </h1>
   )
 }
