@@ -1,7 +1,15 @@
-# meditriever
-CS411 Project Fall 2023 - Kenneth Tong, Natalie Cheng, Katherine Zhang, Aparna Singh
+# Meditriever
+Designed to take in user prescriptions and return a symptoms list using the FDA drug API and the closest pharmacy to the user from Google Maps API. Also utilizes Google Oauth to sign users into their accounts.
 
-Setup:
+CS411 Project Fall 2023
+
+# Group Members
+Kenneth Tong, Natalie Cheng, Katherine Zhang, Aparna Singh
+
+# Notes:
+
+
+# Setup:
 1. Install python
 2. Install pip
 
