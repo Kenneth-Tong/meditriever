@@ -272,22 +272,9 @@ const Home = (props) => {
         </div>
       </section>
       <section id="explore" className="home-find-a-pharmacy">
-        <div className="home-video-details">
-          <div className="home-heading3">
-            <h2 className="home-header3">Explore.</h2>
-          </div>
-        </div>
-        <p className="home-caption2">
-          Most common pharmacies for all your medications in the area
-        </p>
+      
+
         <div className="home-highlight1">
-          <div className="home-image3">
-            <img
-              alt="image"
-              src="/highlight-2-1500w.png"
-              className="home-image4"
-            />
-          </div>
           <div className="home-content2">
             <div className="home-heading4">
               <h2 className="home-header4">Need a medication?</h2>
@@ -379,8 +366,6 @@ const Home = (props) => {
                     className="home-link09 button button-clean"
                   >
                     <span className="home-text24">
-                      <span>Your Closest Pharmacy</span>
-                      <br></br>
                     </span>
                     <span>
                       <span>Find a Medication</span>

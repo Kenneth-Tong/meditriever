@@ -13,12 +13,7 @@ function App() {
       <nav>...</nav>
         <Routes>
           <Route path="/" element={<Home />} />
-<<<<<<< Updated upstream
-          <Route path="/about-drug/:drugName" component={AboutDrug} element={<AboutDrug />} />
-          <Route path="/about-us" element={<AboutUs />} /> 
-=======
           <Route path="/about-drug" element={<AboutDrug />} />
->>>>>>> Stashed changes
           <Route path="/login-page" element={<LoginPage />} />
           <Route path="/fa-qs" element={<FAQs />} />
           <Route path="/404" element={<NotFound />} />
