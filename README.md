@@ -25,7 +25,12 @@ pip install Flask
 
 npm install react-router-dom
 npm i react-dangerous-html 
+npm install gapi-script react-google-login
 
 6. Install Helmet based files
 
 npm install --save react-helmet
+
+pip install --upgrade google-api-python-client
+
+
