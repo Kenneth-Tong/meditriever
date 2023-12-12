@@ -4,11 +4,37 @@
   min-height: 100vh;
   overflow-x: hidden;
   align-items: center;
+  text-align: center;
   flex-direction: column;
 }
 .home-link {
   display: contents;
 }
+
+.Heading {
+  text-align: center;
+}
+
+/* Add this CSS to your stylesheet */
+.home-link01 h3,
+.home-link03 h3,
+.home-link05 h3,
+.home-link02 h2,
+.home-link04 h2,
+.home-link06 h2 {
+  line-height: -30; /* Adjust the value to vertically align the text */
+}
+
+
+.home-link01,
+.home-link03,
+.home-link05 {
+  text-align: center;
+  display: block;
+  position: relative;
+  margin-top: 10px;
+}
+
 .home-go-to-top {
   flex: 0 0 auto;
   right: 50px;
@@ -132,6 +158,25 @@
   flex-direction: row;
   justify-content: space-between;
 }
+
+/* Add this CSS to your stylesheet */
+.search-button {
+  margin-top: 20px;
+  background-color: #1b9ce4; /* Button background color */
+  color: #ffffff; /* Text color */
+  padding: 15px 20px; /* Adjust padding as needed */
+  font-size: 16px; /* Font size */
+  border: none; /* Remove default border */
+  border-radius: 8px; /* Add rounded corners */
+  cursor: pointer; /* Add pointer cursor for interactivity */
+  transition: background-color 0.3s ease; /* Smooth transition for background color */
+}
+
+/* Add hover effect for a more interactive feel */
+.button:hover {
+  background-color: #3498db; /* Change background color on hover */
+}
+
 .home-icon02 {
   fill: #1b9ce4;
   width: 40px;
@@ -311,8 +356,13 @@
   font-weight: 700;
   line-height: 27px;
 }
+
+.home-center {
+  position: relative;
+}
+
 .home-border {
-  top: 43px;
+  margin-top: 80px;
   right: 61px;
   width: 100%;
   border: 2px dashed rgba(120, 120, 120, 0.4);
@@ -330,7 +380,13 @@
   width: 100%;
   height: var(--dl-size-size-small);
   margin-left: 50px;
-  border-radius: 500p;
+  /* border-radius: 500p; */
+  padding: 15px; /* Add padding for top and bottom */
+  font-size: 16px; /* Adjust font size as needed */
+  border: 2px solid #1b9ce4; /* Add a border */
+  border-radius: 8px; /* Add rounded corners */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Add a subtle box shadow */
+  transition: all 0.3s ease; /* Add a smooth transition effect */
 }
 .home-container4 {
   display: flex;

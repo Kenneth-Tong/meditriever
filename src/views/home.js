@@ -43,7 +43,7 @@ const Home = (props) => {
                     <svg viewBox="0 0 1024 1024" className="home-icon02">
                       <path d="M512 598q108 0 225 47t117 123v86h-684v-86q0-76 117-123t225-47zM512 512q-70 0-120-50t-50-120 50-121 120-51 120 51 50 121-50 120-120 50z"></path>
                     </svg>
-                    <Link to="/login-page" className="home-login button">
+                    <Link to="/login-page" className="search-button home-login">
                       Login
                     </Link>
                 
@@ -112,9 +112,9 @@ const Home = (props) => {
             <div className="home-center">
               <div className="home-heading">
                 <h1 className="home-header">Meditriever</h1>
-                <p class="py-4">
+                <h3 class="py-4">
                   Fetch, retrieve, and store medications you need.   
-                </p>
+                </h3>
               </div>
               <div className="home-border"></div>
               <input
@@ -122,7 +122,7 @@ const Home = (props) => {
                 placeholder="Search a medication"
                 className="home-textinput input"
               />
-              <button name="Search" type="button" className="button">
+              <button name="Search" type="button" className="search-button">
                 <span>
                   <span>Search</span>
                   <br></br>
@@ -131,33 +131,32 @@ const Home = (props) => {
               <div className="home-container4">
                 <div className="home-explore">
                   <a href="#new" className="home-link01 button">
-                    Add a New Prescription
+                    <h3>Add a New Prescription</h3>
                   </a>
                   <a href="#new" className="home-link02 Heading">
-                    New
+                    <h2>New</h2>
                   </a>
                 </div>
                 <div className="home-new">
                   <a href="#explore" className="home-link03 button">
-                    Explore Store Locations
+                    <h3>Explore Store Locations</h3>
                   </a>
                   <a href="#explore" className="home-link04 Heading">
-                    Explore
+                    <h2>Explore</h2>
                   </a>
                 </div>
                 <div className="home-about">
                   <a href="#about" className="home-link05 button">
-                    Learn more about us!
+                    <h3>Learn more about us!</h3>
                   </a>
                   <a href="#about" className="home-link06 Heading">
-                    About Us
+                    <h2>About Us</h2>
                   </a>
                 </div>
               </div>
             </div>
           </div>
         </div>
-        <div className="home-boarder"></div>
       </section>
       <section id="new" className="home-popular-prescriptions">
         <div className="home-main">
