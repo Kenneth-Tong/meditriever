@@ -144,189 +144,22 @@ const FAQs = (props) => {
           <div className="fa-qs-heading">
             <h2 className="fa-qs-header">Frequently asked questions</h2>
             <p className="fa-qs-caption">
-              Lorem ipsum dolor sit consectetur adipiscing elit, sed do eiusmod
-              tempor incididunt.
+              <h3>Question 1: What is the purpose of this Website?</h3>
+              <b></b>
+              A: We designed this website to store all of a user's medications, and allow them to see what side effects each medicine
+              could give them. It would also connect an individual with the closest pharmacy to them.
+
+              <h3>Question 2: How did we make it?</h3>
+              <b></b>
+              A: Our packages were: React, Axios, NPM, Google API, FDA Drug API. We used Python, JavaScript, SQL, and CSS to build this.
+              <h3>Question 3: How do I use this website?</h3>
+              <b></b>
+              A: First, login using Google. Then, add any prescriptions you have to your page. Finally, allow us to give you the closest pharmacy and side effects
+              for your medications!
             </p>
+            
           </div>
-          <div className="fa-qs-accordion">
-            <div
-              data-role="accordion-container"
-              className="accordion fa-qs-element"
-            >
-              <div className="fa-qs-content1">
-                <span className="fa-qs-header1">
-                  Lorem ipsum dolor sit ametetur elit?
-                </span>
-                <span
-                  data-role="accordion-content"
-                  className="fa-qs-description"
-                >
-                  Sed ut perspiciatis unde omnis iste natus error sit voluptatem
-                  accusantium doloremque laudantium, totam rem aperiam, eaque
-                  ipsa quae ab illo inventore veritatis et quasi architecto
-                  beatae vitae dicta sunt explicabo.
-                </span>
-              </div>
-              <div className="fa-qs-icon-container">
-                <svg
-                  viewBox="0 0 1024 1024"
-                  data-role="accordion-icon-closed"
-                  className="fa-qs-icon22"
-                >
-                  <path d="M213.333 554.667h256v256c0 23.552 19.115 42.667 42.667 42.667s42.667-19.115 42.667-42.667v-256h256c23.552 0 42.667-19.115 42.667-42.667s-19.115-42.667-42.667-42.667h-256v-256c0-23.552-19.115-42.667-42.667-42.667s-42.667 19.115-42.667 42.667v256h-256c-23.552 0-42.667 19.115-42.667 42.667s19.115 42.667 42.667 42.667z"></path>
-                </svg>
-                <svg
-                  viewBox="0 0 1024 1024"
-                  data-role="accordion-icon-open"
-                  className="fa-qs-icon24"
-                >
-                  <path d="M213.333 554.667h597.333c23.552 0 42.667-19.115 42.667-42.667s-19.115-42.667-42.667-42.667h-597.333c-23.552 0-42.667 19.115-42.667 42.667s19.115 42.667 42.667 42.667z"></path>
-                </svg>
-              </div>
-            </div>
-            <div
-              data-role="accordion-container"
-              className="fa-qs-element1 accordion"
-            >
-              <div className="fa-qs-content2">
-                <span className="fa-qs-header2">
-                  Excepteur sint occaecat cupidatat non sunt in culpa qui
-                  officia deserunt mollit anim id est laborum?
-                </span>
-                <span
-                  data-role="accordion-content"
-                  className="fa-qs-description1"
-                >
-                  Sed ut perspiciatis unde omnis iste natus error sit voluptatem
-                  accusantium doloremque laudantium, totam rem aperiam, eaque
-                  ipsa quae ab illo inventore veritatis et quasi architecto
-                  beatae vitae dicta sunt explicabo.
-                </span>
-              </div>
-              <div className="fa-qs-icon-container1">
-                <svg
-                  viewBox="0 0 1024 1024"
-                  data-role="accordion-icon-closed"
-                  className="fa-qs-icon26"
-                >
-                  <path d="M213.333 554.667h256v256c0 23.552 19.115 42.667 42.667 42.667s42.667-19.115 42.667-42.667v-256h256c23.552 0 42.667-19.115 42.667-42.667s-19.115-42.667-42.667-42.667h-256v-256c0-23.552-19.115-42.667-42.667-42.667s-42.667 19.115-42.667 42.667v256h-256c-23.552 0-42.667 19.115-42.667 42.667s19.115 42.667 42.667 42.667z"></path>
-                </svg>
-                <svg
-                  viewBox="0 0 1024 1024"
-                  data-role="accordion-icon-open"
-                  className="fa-qs-icon28"
-                >
-                  <path d="M213.333 554.667h597.333c23.552 0 42.667-19.115 42.667-42.667s-19.115-42.667-42.667-42.667h-597.333c-23.552 0-42.667 19.115-42.667 42.667s19.115 42.667 42.667 42.667z"></path>
-                </svg>
-              </div>
-            </div>
-            <div
-              data-role="accordion-container"
-              className="fa-qs-element2 accordion"
-            >
-              <div className="fa-qs-content3">
-                <span className="fa-qs-header3">
-                  Tempor incididunt ut labore et dolore magna aliquat enim ad
-                  minim?
-                </span>
-                <span
-                  data-role="accordion-content"
-                  className="fa-qs-description2"
-                >
-                  Sed ut perspiciatis unde omnis iste natus error sit voluptatem
-                  accusantium doloremque laudantium, totam rem aperiam, eaque
-                  ipsa quae ab illo inventore veritatis et quasi architecto
-                  beatae vitae dicta sunt explicabo.
-                </span>
-              </div>
-              <div className="fa-qs-icon-container2">
-                <svg
-                  viewBox="0 0 1024 1024"
-                  data-role="accordion-icon-closed"
-                  className="fa-qs-icon30"
-                >
-                  <path d="M213.333 554.667h256v256c0 23.552 19.115 42.667 42.667 42.667s42.667-19.115 42.667-42.667v-256h256c23.552 0 42.667-19.115 42.667-42.667s-19.115-42.667-42.667-42.667h-256v-256c0-23.552-19.115-42.667-42.667-42.667s-42.667 19.115-42.667 42.667v256h-256c-23.552 0-42.667 19.115-42.667 42.667s19.115 42.667 42.667 42.667z"></path>
-                </svg>
-                <svg
-                  viewBox="0 0 1024 1024"
-                  data-role="accordion-icon-open"
-                  className="fa-qs-icon32"
-                >
-                  <path d="M213.333 554.667h597.333c23.552 0 42.667-19.115 42.667-42.667s-19.115-42.667-42.667-42.667h-597.333c-23.552 0-42.667 19.115-42.667 42.667s19.115 42.667 42.667 42.667z"></path>
-                </svg>
-              </div>
-            </div>
-            <div
-              data-role="accordion-container"
-              className="fa-qs-element3 accordion"
-            >
-              <div className="fa-qs-content4">
-                <span className="fa-qs-header4">
-                  Lorem ipsum dolor sit ametetur elit?
-                </span>
-                <span
-                  data-role="accordion-content"
-                  className="fa-qs-description3"
-                >
-                  Sed ut perspiciatis unde omnis iste natus error sit voluptatem
-                  accusantium doloremque laudantium, totam rem aperiam, eaque
-                  ipsa quae ab illo inventore veritatis et quasi architecto
-                  beatae vitae dicta sunt explicabo.
-                </span>
-              </div>
-              <div className="fa-qs-icon-container3">
-                <svg
-                  viewBox="0 0 1024 1024"
-                  data-role="accordion-icon-closed"
-                  className="fa-qs-icon34"
-                >
-                  <path d="M213.333 554.667h256v256c0 23.552 19.115 42.667 42.667 42.667s42.667-19.115 42.667-42.667v-256h256c23.552 0 42.667-19.115 42.667-42.667s-19.115-42.667-42.667-42.667h-256v-256c0-23.552-19.115-42.667-42.667-42.667s-42.667 19.115-42.667 42.667v256h-256c-23.552 0-42.667 19.115-42.667 42.667s19.115 42.667 42.667 42.667z"></path>
-                </svg>
-                <svg
-                  viewBox="0 0 1024 1024"
-                  data-role="accordion-icon-open"
-                  className="fa-qs-icon36"
-                >
-                  <path d="M213.333 554.667h597.333c23.552 0 42.667-19.115 42.667-42.667s-19.115-42.667-42.667-42.667h-597.333c-23.552 0-42.667 19.115-42.667 42.667s19.115 42.667 42.667 42.667z"></path>
-                </svg>
-              </div>
-            </div>
-            <div
-              data-role="accordion-container"
-              className="fa-qs-element4 accordion"
-            >
-              <div className="fa-qs-content5">
-                <span className="fa-qs-header5">
-                  Incididunt ut labore et dolore?
-                </span>
-                <span
-                  data-role="accordion-content"
-                  className="fa-qs-description4"
-                >
-                  Sed ut perspiciatis unde omnis iste natus error sit voluptatem
-                  accusantium doloremque laudantium, totam rem aperiam, eaque
-                  ipsa quae ab illo inventore veritatis et quasi architecto
-                  beatae vitae dicta sunt explicabo.
-                </span>
-              </div>
-              <div className="fa-qs-icon-container4">
-                <svg
-                  viewBox="0 0 1024 1024"
-                  data-role="accordion-icon-closed"
-                  className="fa-qs-icon38"
-                >
-                  <path d="M213.333 554.667h256v256c0 23.552 19.115 42.667 42.667 42.667s42.667-19.115 42.667-42.667v-256h256c23.552 0 42.667-19.115 42.667-42.667s-19.115-42.667-42.667-42.667h-256v-256c0-23.552-19.115-42.667-42.667-42.667s-42.667 19.115-42.667 42.667v256h-256c-23.552 0-42.667 19.115-42.667 42.667s19.115 42.667 42.667 42.667z"></path>
-                </svg>
-                <svg
-                  viewBox="0 0 1024 1024"
-                  data-role="accordion-icon-open"
-                  className="fa-qs-icon40"
-                >
-                  <path d="M213.333 554.667h597.333c23.552 0 42.667-19.115 42.667-42.667s-19.115-42.667-42.667-42.667h-597.333c-23.552 0-42.667 19.115-42.667 42.667s19.115 42.667 42.667 42.667z"></path>
-                </svg>
-              </div>
-            </div>
-          </div>
+         
         </div>
       </section>
       <section className="home-footer">
@@ -364,8 +197,6 @@ const FAQs = (props) => {
                     className="home-link09 button button-clean"
                   >
                     <span className="home-text24">
-                      <span>Your Closest Pharmacy</span>
-                      <br></br>
                     </span>
                     <span>
                       <span>Find a Medication</span>
@@ -393,72 +224,6 @@ const FAQs = (props) => {
         <div className="fa-qs-container5">
           <Script
             html={`<script>
-  function initAccordion() {
-    /*
-    Accordion - Code Embed
-    */
-    const accordionContainers = document.querySelectorAll(
-      '[data-role="accordion-container"]'
-    ); // All accordion containers
-    const accordionContents = document.querySelectorAll(
-      '[data-role="accordion-content"]'
-    ); // All accordion content
-    const accordionIconsClosed = document.querySelectorAll(
-      '[data-role="accordion-icon-closed"]'
-    ); // All accordion closed icons
-    const accordionIconsOpen = document.querySelectorAll(
-      '[data-role="accordion-icon-open"]'
-    ); // All accordion open icons
-
-    accordionContents.forEach((accordionContent) => {
-      accordionContent.style.display = "none"; //Hides all accordion contents
-    });
-
-    accordionIconsClosed.forEach((icon) => {
-      icon.style.display = "flex";
-    });
-
-    accordionIconsOpen.forEach((icon) => {
-      icon.style.display = "none";
-    });
-
-    accordionContainers.forEach((accordionContainer, index) => {
-      if (accordionContainer.classList.contains("initialised")) {
-        return;
-      }
-
-      accordionContainer.classList.add("initiased");
-
-      accordionContainer.addEventListener("click", () => {
-        if (accordionContents[index].style.display === "flex") {
-          // If the accordion is already open, close it
-          accordionContents[index].style.display = "none";
-          accordionIconsClosed[index].style.display = "flex";
-          accordionIconsOpen[index].style.display = "none";
-        } else {
-          // If the accordion is closed, open it
-          accordionContents.forEach((accordionContent) => {
-            accordionContent.style.display = "none"; //Hides all accordion contents
-          });
-
-          accordionIconsClosed.forEach((accordionIcon) => {
-            accordionIcon.style.display = "flex"; // Resets all icon transforms to 0deg (default)
-          });
-
-          accordionIconsOpen.forEach((accordionIcon) => {
-            accordionIcon.style.display = "none";
-          });
-
-          accordionContents[index].style.display = "flex"; // Shows accordion content
-          accordionIconsClosed[index].style.display = "none"; // Rotates accordion icon 180deg
-          accordionIconsOpen[index].style.display = "flex";
-        }
-      });
-    });
-  }
-
-  initAccordion();
-</script>
 `}
           ></Script>
         </div>

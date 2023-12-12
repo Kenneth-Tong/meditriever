@@ -316,7 +316,7 @@ const Home = (props) => {
           <div className="home-guide-wrapper2">
             <Guide
               Name="Aparna Singh"
-              Location="Computer Science, EAP 2025"
+              Location="Computer Science, 2025"
               Portrait="/Guides/aparnacrop.png"
               rootClassName="guide-root-class-name"
             ></Guide>
