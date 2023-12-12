@@ -166,7 +166,7 @@ const Home = (props) => {
           </div>
         </div>
         <div className="home-offers">
-          <Link to="/home">
+          <Link to="/about-drug">
             <div className="home-offer-container">
               <Offer
                 Image="https://images.unsplash.com/photo-1632067694852-8386d261115a?ixid=M3w5MTMyMXwwfDF8c2VhcmNofDF8fHR5bGVub2x8ZW58MHx8fHwxNzAxMTM4MDE4fDA&amp;ixlib=rb-4.0.3&amp;w=1500"
@@ -176,7 +176,7 @@ const Home = (props) => {
               ></Offer>
             </div>
           </Link>
-          <Link to="/drug">
+          <Link to="/about-drug">
             <div className="home-offer-container1">
               <Offer
                 Image="https://images.unsplash.com/photo-1675521005096-729123cd1dc8?ixid=M3w5MTMyMXwwfDF8c2VhcmNofDV8fGFkZGVyYWxsfGVufDB8fHx8MTcwMTEzODA0NXww&amp;ixlib=rb-4.0.3&amp;w=1500"
@@ -185,7 +185,7 @@ const Home = (props) => {
               ></Offer>
             </div>
           </Link>
-          <Link to="/home">
+          <Link to="/dug">
             <div className="home-offer-container2">
               <Offer
                 Image="https://images.unsplash.com/photo-1544991936-9464fa9919d2?ixid=M3w5MTMyMXwwfDF8c2VhcmNofDQ2fHxtZWRpY2luZXxlbnwwfHx8fDE3MDExMzg2OTB8MA&amp;ixlib=rb-4.0.3&amp;w=1500"
