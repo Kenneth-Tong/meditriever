@@ -1,5 +1,6 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
+import React, { useState } from 'react';
 
 import Script from 'react-dangerous-html'
 import { Helmet } from 'react-helmet'
@@ -7,6 +8,36 @@ import { Helmet } from 'react-helmet'
 import './login-page.css'
 
 const LoginPage = (props) => {
+
+  const [username, setUsername] = useState('');
+  const [email, setEmail] = useState('');
+ 
+  //handleLogin funtion to send a POST request to the Flask server with the user data
+  const handleLogin = () => {
+    // Prepare the user data to send to the server
+    const userData = {
+      username: username,
+      email: email,
+    };
+
+    // Make a POST request to Flask server
+    fetch('/add_user', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify(userData),
+    })
+      .then(response => response.json())
+      .then(data => {
+        console.log(data.message); // Handle the response from the server
+      })
+      .catch(error => {
+        console.error('Error:', error);
+      });
+  };
+
+
   return (
     <div className="login-page-container">
       <header data-thq="thq-navbar" className="login-page-navbar">
@@ -161,6 +192,22 @@ const LoginPage = (props) => {
           <div className="login-page-accordion">
           </div>
           
+          <div>
+            <input
+              type="text"
+              placeholder="Username"
+              value={username}
+              onChange={e => setUsername(e.target.value)}
+            />
+            <input
+              type="email"
+              placeholder="Email"
+              value={email}
+              onChange={e => setEmail(e.target.value)}
+            />
+            <button onClick={handleLogin}>Login</button>
+          </div>
+          
           <div class="col s12 m6 offset-m3 center-align">
             <a class="oauth-container btn darken-4 white black-text" href="/users/google-oauth/">
             <div class="left">
@@ -312,5 +359,7 @@ const LoginPage = (props) => {
     </div>
   )
 }
+
+
 
 export default LoginPage
