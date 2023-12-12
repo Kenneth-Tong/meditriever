@@ -307,52 +307,42 @@ const Home = (props) => {
       </section>
       <section id="about" className="home-about-us">
         <div className="home-heading5">
-          <Link to="/about-us" className="home-navlink10">
-            <h2 className="home-header5">Meet Meditriever</h2>
-          </Link>
+          <h2 className="home-header5">Meet Meditriever</h2>
           <p className="home-caption4">The founders of Meditriever</p>
         </div>
         <div className="home-list">
-          <Link to="/home">
-            <div className="home-guide-wrapper">
-              <Guide
-                Name="Kenneth Tong"
-                Location="Biology CMG, Computer Science 2025"
-                Portrait="/Guides/ken.jpg"
-                rootClassName="guide-root-class-name9"
-              ></Guide>
-            </div>
-          </Link>
-          <Link to="/home">
-            <div className="home-guide-wrapper1">
-              <Guide
-                Name="Natalie Cheng"
-                Location="Computer Science 2025"
-                Portrait="/Guides/natalie.jpg"
-                rootClassName="guide-root-class-name2"
-              ></Guide>
-            </div>
-          </Link>
-          <Link to="/home">
-            <div className="home-guide-wrapper2">
-              <Guide
-                Name="Aparna Singh"
-                Location="Computer Science, EAP 2025"
-                Portrait="/Guides/aparna.jpg"
-                rootClassName="guide-root-class-name"
-              ></Guide>
-            </div>
-          </Link>
-          <Link to="/home">
-            <div className="home-guide-wrapper3">
-              <Guide
-                Name="Katherine Zhang"
-                Location="BMB 2025"
-                Portrait="/Guides/kat.jpg"
-                rootClassName="guide-root-class-name1"
-              ></Guide>
-            </div>
-          </Link>
+          <div className="home-guide-wrapper">
+            <Guide
+              Name="Kenneth Tong"
+              Location="Biology CMG, Computer Science 2025"
+              Portrait="/Guides/ken.jpg"
+              rootClassName="guide-root-class-name9"
+            ></Guide>
+          </div>
+          <div className="home-guide-wrapper1">
+            <Guide
+              Name="Natalie Cheng"
+              Location="Computer Science 2025"
+              Portrait="/Guides/natalie.jpg"
+              rootClassName="guide-root-class-name2"
+            ></Guide>
+          </div>
+          <div className="home-guide-wrapper2">
+            <Guide
+              Name="Aparna Singh"
+              Location="Computer Science, EAP 2025"
+              Portrait="/Guides/aparnacrop.png"
+              rootClassName="guide-root-class-name"
+            ></Guide>
+          </div>
+          <div className="home-guide-wrapper3">
+            <Guide
+              Name="Katherine Zhang"
+              Location="BMB 2025"
+              Portrait="/Guides/kat.jpg"
+              rootClassName="guide-root-class-name1"
+            ></Guide>
+          </div>
         </div>
       </section>
       <section className="home-footer">
