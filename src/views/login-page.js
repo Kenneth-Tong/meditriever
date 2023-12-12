@@ -1,6 +1,5 @@
-import React from 'react'
-import { Link } from 'react-router-dom'
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 
 import Script from 'react-dangerous-html'
 import { Helmet } from 'react-helmet'
