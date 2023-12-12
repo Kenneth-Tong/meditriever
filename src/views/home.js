@@ -32,7 +32,7 @@ const Home = (props) => {
             <header data-thq="thq-navbar" className="home-navbar">
               <div className="home-container1">
                 <div data-thq="thq-navbar-nav" className="home-desktop-menu">
-                  <Link to="/home" className="home-navlink">
+                  <Link to="/" className="home-navlink">
                     <img
                       alt="image"
                       src="/Icons/meditriever_logo.png"
@@ -301,6 +301,7 @@ const Home = (props) => {
               </p>
             </div>
             <button className="home-find button">Find </button>
+            
           </div>
         </div>
       </section>
