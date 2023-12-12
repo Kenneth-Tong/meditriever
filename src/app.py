@@ -1,7 +1,7 @@
 import os
 import requests
 from dotenv import load_dotenv
-from flask import Flask, jsonify
+from flask import Flask, jsonify, request
 from flask_sqlalchemy import SQLAlchemy
 
 db = SQLAlchemy()
@@ -91,13 +91,33 @@ GOOGLE_MAPS_API_KEY = os.getenv("GOOGLE_MAPS_API_KEY")  # Remember .env file!
 
 # app = Flask(__name__)
 
-@app.route("/")
-def return_response():
-    json_list = list()
-    json_list.append(app_get_drug())
-    json_list.append(app_get_id())
-    print(json_list)
-    return json_list
+@app.route("/about-drug", methods=['POST'])
+def handle_user_data(drug):
+    if request.method == 'POST':
+        # Get the data from the JSON body of the request
+        data = request.get_json()
+        
+        # Access the parameters sent from the frontend
+        drug_name = data.get('drug')
+        effects = ""
+        company_name = ""
+        purpose = ""
+        contents = ""
+        howTo = ""
+        
+        # Perform any necessary backend processing with the received data
+        response_data = {
+            'message': 'Data received successfully!',
+            'generic_name': drug_name,
+            'warnings': effects,
+            'brand_name': company_name,
+            'indications_and_usage': purpose,
+            'inactive_ingredients': contents,
+            'dosage_and_administration': howTo
+        }
+        
+        # Return the response as JSON
+        return jsonify(response_data)
 
 @app.route("/drug")
 def app_get_drug(drug):
