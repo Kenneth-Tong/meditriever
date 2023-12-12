@@ -7,7 +7,6 @@ import LoginPage from './views/login-page.js'
 import FAQs from './views/fa-qs.js'
 import NotFound from './views/not-found.js'
 import AboutDrug from './views/about-drug.js'
-import findLocation from './views/findLocation.js';
 
 function App() {
   return (
@@ -19,7 +18,6 @@ function App() {
           <Route path="/about-us" element={<AboutUs />} /> 
           <Route path="/login-page" element={<LoginPage />} />
           <Route path="/fa-qs" element={<FAQs />} />
-          <Route path="/findLocation" element={<findLocation/>} />
           <Route path="/404" element={<NotFound />} />
       </Routes>
   </div>

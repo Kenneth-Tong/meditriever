@@ -300,9 +300,7 @@ const Home = (props) => {
                 <br></br>
               </p>
             </div>
-            <Link to="/findLocation" classname="home-navlink10">
-              <button className="home-find button">Find </button>
-            </Link>
+            <button className="home-find button">Find </button>
             
           </div>
         </div>
