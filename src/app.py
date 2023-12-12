@@ -10,7 +10,7 @@ db = SQLAlchemy()
 class User(db.Model):
     email = db.Column(db.String(120), primary_key=True, unique=True, nullable=False)
     username = db.Column(db.String(80), unique=True, nullable=False)
-    date = db.Column(db.Integer, nullabele=False)
+    #date = db.Column(db.Integer, nullabele=False)
     search_history = db.relationship('SearchHistory', backref='User', lazy=True)
 
 #stores user search history
@@ -35,9 +35,9 @@ Updating User Database
 '''
 
 @app.route('/add_user', methods=['POST'])
-def add_user(username_input, email_input, date_input):
+def add_user(username_input, email_input):
     data = request.get_json() #returns username_input + email_input
-    new_user = User(username=data[username_input], email=data[email_input], date = data[date_input])
+    new_user = User(username=data[username_input], email=data[email_input])
     db.session.add(new_user)
     db.session.commit()
     return jsonify({'message': 'User added successfully'})
@@ -68,9 +68,9 @@ def add_data():
     username = data.get('username')
     email = data.get('email')
     search = data.get('search')
-    date = data.get('date')
+    #date = data.get('date')
 
-    add_user(username, email, date)
+    add_user(username, email)
     add_search(email, search)
 
     return jsonify({'message': 'Data received and processed successfully'})
