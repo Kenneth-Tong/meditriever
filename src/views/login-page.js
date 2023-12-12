@@ -1,12 +1,15 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import Login from '../components/login'; // Import the Login component
 import Logout from '../components/logout'; //Import the Logout component
 
-import Script from 'react-dangerous-html'
-import { Helmet } from 'react-helmet'
+import Script from 'react-dangerous-html';
+import { Helmet } from 'react-helmet';
+import {gapi} from 'gapi-script';
 
 import './login-page.css'
+
+const clientID = "26529385532-afh4c5tp9ijjh4eg1utsaa8p16c9bgvl.apps.googleusercontent.com";
 
 function LoginPage() {
 
@@ -39,6 +42,18 @@ function LoginPage() {
         console.error('Error:', error);
       });
   };
+
+  //for login successes and failures
+  useEffect(() => {
+    function start() {
+      gapi.client.init({
+        clientID: clientID,
+        scope: "",
+      })
+    };
+
+    gapi.load('client:auth2', start);
+  })
 
 
   return (

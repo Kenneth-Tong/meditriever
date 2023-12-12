@@ -1,4 +1,4 @@
-import { GoogleLogout } from "react-google-login";
+import { GoogleLogout } from 'react-google-login';
 
 const clientID = "26529385532-afh4c5tp9ijjh4eg1utsaa8p16c9bgvl.apps.googleusercontent.com";
 

@@ -1,4 +1,4 @@
-import { GoogleLogin } from 'react-google-login'
+import { GoogleLogin } from 'react-google-login';
 import axios from 'axios';
 
 const clientID = "26529385532-afh4c5tp9ijjh4eg1utsaa8p16c9bgvl.apps.googleusercontent.com";
