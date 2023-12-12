@@ -24,10 +24,6 @@ app = Flask(__name__)
 app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///meditriever/src/UserData.db' #not sure if this is the correct path
 db = SQLAlchemy(app)
 
-<<<<<<< Updated upstream
-from FDADrugAPI import get_drug
-from GoogleMapsAPI import get_id
-=======
 
 #placeholder --> replace with javascript user input
 #drug_input = "tylenol"
@@ -87,18 +83,14 @@ FDA API + Google Maps API
 
 from src.FDADrugAPI import get_drug
 from src.GoogleMapsAPI import get_id
->>>>>>> Stashed changes
 
 load_dotenv()
 
 FDA_API_KEY = os.getenv("FDA_API_KEY")  # Remember .env file!
 GOOGLE_MAPS_API_KEY = os.getenv("GOOGLE_MAPS_API_KEY")  # Remember .env file!
 
-<<<<<<< Updated upstream
 # app = Flask(__name__)
 
-=======
->>>>>>> Stashed changes
 @app.route("/")
 def return_response():
     json_list = list()
