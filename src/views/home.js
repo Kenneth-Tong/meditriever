@@ -223,26 +223,12 @@ const Home = (props) => {
             <div className="home-heading4">
               <h2 className="home-header4">Location</h2>
               <p className="home-caption3">
-<<<<<<< Updated upstream
 
               <a href="#how-it-works" className='home-link08 search-button'>
                 <h3>Your Nearest Pharmacy</h3>
               </a>
 
 
-=======
-              <p>
-                We have you covered. Find the closest pharmacy to you with the
-                press of a button.
-              </p>
-              <Link to="/about-location/CVS">
-              <a href="#how-it-works" className="home-link08">
-                <button className="home-find button">Your Nearest Pharmacy </button>
-                <br></br>
-              </a>
-              </Link>
-                <br></br>
->>>>>>> Stashed changes
               </p>
             </div>
            
