@@ -196,6 +196,35 @@ const Home = (props) => {
         </div>
 
       </section>
+       
+      <section id="new" className="home-locations">
+      <div className="home-main">
+          <div className="home-heading1">
+            <h2 className="home-header1">Popular Locations</h2>
+          </div>
+        </div>
+        <div className="home-offers">
+          <Link to="/Locations/CVS">
+            <div className="home-offer-container">
+              <Offer
+                Image="/Highlights/CVS.png"
+                Location="CVS"
+                Description="Pharmacy."
+              ></Offer>
+            </div>
+          </Link>
+          <Link to="/Locations/Walgreens">
+            <div className="home-offer-container">
+              <Offer
+                Image="/Highlights/Walgreens.png"
+                Location="Walgreens"
+                Description="Pharmacy."
+              ></Offer>
+            </div>
+          </Link>
+        </div>
+      </section>
+      
       <section id="how-it-works" className="home-new-user-create-account">
         <div className="home-highlight">
           <div className="home-content1">
