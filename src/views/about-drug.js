@@ -61,16 +61,18 @@ const AboutDrug = () => {
 
   return (
     <div className="about-drug">
-      <h1>About Drug</h1>
+      <h1>About Medication</h1>
       {loading && <p>Loading...</p>}
       {error && <p style={{ color: 'red' }}>{error}</p>}
       {drugData && (
         <div>
           <p>Generic Name: {drugData.generic_name}</p>
-          <p>Warnings: {drugData.warnings}</p>
           <p>Brand Name: {drugData.brand_name}</p>
-          <p>Indications and Usage: {drugData.indications_and_usage}</p>
-          <p>Inactive Ingredients: {drugData.inactive_ingredients}</p>
+          <p>Purpose for Taking: {drugData.purpose}</p>
+          <p>Active Ingredients: {drugData.active_ingredients}</p>
+          <p>Warnings: {drugData.warnings}</p>
+          <p>Possible Reactions: {drugData.reactions}</p>
+          <p>Drug Interactions: {drugData.interactions}</p>
           <p>Dosage and Administration: {drugData.dosage_and_administration}</p>
 
           {/* Pass drugName to Create component */}

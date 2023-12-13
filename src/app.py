@@ -1,4 +1,5 @@
 import os
+import sys
 import requests
 from dotenv import load_dotenv
 from flask import Flask, jsonify, request
@@ -38,9 +39,10 @@ db = SQLAlchemy(app)
 Updating User Database
 '''
 
+#testing posting
 @app.route('/test', methods=['GET'])
 def testFun():
-    return jsonify({'message':'poopy'})
+    return jsonify({'message':'Hello World'})
 
 @app.route('/add_user', methods=['POST'])
 def add_user(username_input, email_input):
@@ -88,7 +90,7 @@ def add_data():
 FDA API + Google Maps API
 '''
 
-from FDADrugAPI import get_drug
+from FDADrugAPI import get_drug, get_form, get_patient_drug_reaction
 from GoogleMapsAPI import get_id
 
 load_dotenv()
@@ -96,9 +98,20 @@ load_dotenv()
 FDA_API_KEY = os.getenv("FDA_API_KEY")  # Remember .env file!
 GOOGLE_MAPS_API_KEY = os.getenv("GOOGLE_MAPS_API_KEY")  # Remember .env file!
 
-# app = Flask(__name__)
+#converting lists from json to list for front end
+def convert_list(response, term, length):
+    addList = list()
+    addList.append((response[0][term]).lower().capitalize())
+    if length > 1:
+        for i in (1, length - 1, 1):
+            addList.append((response[i][term]).lower().capitalize())
+    addList = list(set(addList))  # conversion into a set then into a list for duplicates
+    return addList
 
-from FDADrugAPI import get_drug
+def api_response():
+    from flask import jsonify
+    if request.method == 'POST':
+        return jsonify(**request.json)
 
 @app.route("/about-drug", methods=['POST'])
 def handle_user_data():
@@ -107,34 +120,100 @@ def handle_user_data():
         data = request.get_json()
         
         drug_name = data.get('drug')
-        print('drug_name: ' + drug_name)
         
         # Call get_drug function to retrieve drug information
-        drug_data = get_drug(FDA_API_KEY, drug_name, 1)
+        drug_data = get_drug(FDA_API_KEY, drug_name, 1)["results"][0]
+
+        try:
+            generic_name = drug_data["openfda"]["generic_name"]
+        except Exception as e:
+            generic_name = drug_name
+
+        try:
+            active_ingredients = drug_data["active_ingredient"]
+        except Exception as e:
+            active_ingredients = "None Listed"
+
+        try:
+            warnings = ", ".join(drug_data["do_not_use"])
+        except Exception as e:
+            try:
+                warnings = ", ".join(drug_data["warnings"])
+            except Exception as e:
+                try:
+                    warnings = ", ".join(drug_data["warnings_and_cautions"])
+                except Exception as e:
+                    try:
+                        warnings = ", ".join(drug_data["boxed_warning"])
+                    except Exception as e:
+                        warnings = "None Listed"
+
+        try:
+            brand_name = " ".join(drug_data["openfda"]["brand_name"])
+        except Exception as e:
+            brand_name = drug_name
+
+        try:
+            drug_form = get_form(FDA_API_KEY, drug_name, 3)
+        except Exception as e:
+            "None Listed"
+
+        form_list_string = convert_list(drug_form["results"], "term", 3)
+
+        try:
+            administation = drug_data["dosage_and_administration"]
+        except Exception as e:
+            try:
+                administation_get_form = get_form(FDA_API_KEY, drug_name, 3)
+                administation = convert_list(administation_get_form["results"], "term", 3)
+            except Exception as e:
+                administation = "None Listed" 
         
-        # Extract relevant information from the returned JSON
-        effects = drug_data.get('effects', "")
-        company_name = drug_data.get('companyName', "")
-        purpose = drug_data.get('purpose', "")
-        contents = drug_data.get('contents', "")
-        howTo = drug_data.get('howTo', "")
+        try:
+            reactions = drug_data["adverse_reactions"]
+        except Exception as e:
+            try:
+                reactions_get_reaction = get_patient_drug_reaction(FDA_API_KEY, drug_name, 5)["results"]  # number of results
+                reactions = convert_list(reactions_get_reaction, "term", 5)
+            except Exception as e:
+                reactions = "None Listed" 
+
+        try:
+            purpose = drug_data["purpose"]
+        except Exception as e:
+            try:
+                purpose = drug_data["indications_and_usage"]
+            except Exception as e:
+                try:
+                    purpose = drug_data["description"]
+                except Exception as e:
+                    purpose = "None Listed" 
+
+        try:
+            interactions = drug_data["drug_interactions"]
+        except Exception as e:
+            try:
+                interactions = drug_data["description"]
+            except Exception as e:
+                interactions = "None Listed" 
         
         # Perform any necessary backend processing with the received data
         response_data = {
             'message': 'Data received successfully!',
-            'generic_name': drug_name,
-            'warnings': effects,
-            'brand_name': company_name,
-            'indications_and_usage': purpose,
-            'inactive_ingredients': contents,
-            'dosage_and_administration': howTo,
-            'drug_data':drug_data
+            'given_name': drug_name,
+            'generic_name': generic_name,
+            'brand_name': brand_name,
+            'purpose': purpose,
+            'active_ingredients': active_ingredients,
+            'warnings': warnings,
+            'reactions': reactions,
+            'interactions': interactions,
+            'dosage_and_administration': administation,
+            'drug_data': drug_data
         }
         
         # Return the response as JSON
         return jsonify(response_data), 200, {'Content-Type': 'application/json'}
-
-
 
 @app.route("/location")
 def app_get_id(location):
@@ -142,5 +221,6 @@ def app_get_id(location):
 
 if __name__ == "__main__":
     app.run(port=3000)
+    app.debug = True
     # db.create_all()
     app.run(debug=True)
