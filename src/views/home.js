@@ -259,16 +259,18 @@ const Home = (props) => {
         <div className="home-highlight1">
           <div className="home-content2">
             <div className="home-heading4">
-              <h2 className="home-header4">Need a medication?</h2>
+              <h2 className="home-header4">Location</h2>
               <p className="home-caption3">
-                <span>
-                  We have you covered. Find the closest pharmacy to you with the
-                  press of a button.
-                </span>
+              <Link to="/Locations">
+              <a href="#how-it-works" className="home-link08">
+                <button className="home-find button">Your Nearest Pharmacy </button>
+                <br></br>
+              </a>
+            </Link>
                 <br></br>
               </p>
             </div>
-            <button className="home-find button">Find </button>
+           
             
           </div>
         </div>
