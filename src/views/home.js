@@ -112,11 +112,11 @@ const Home = (props) => {
             <div className="home-center">
               <div className="home-heading">
                 <h1 className="home-header">Meditriever</h1>
+                <div className="home-border"></div>
                 <h3 class="py-4">
                   Fetch, retrieve, and store medications you need.   
                 </h3>
               </div>
-              <div className="home-border"></div>
               <input
                 type="text"
                 placeholder="Search a medication"
@@ -194,64 +194,26 @@ const Home = (props) => {
             </div>
           </Link>
         </div>
-        <div className="home-pagination">
-          <button className="home-previous button-option button">
-            <svg viewBox="0 0 1024 1024" className="home-icon14">
-              <path d="M658 708l-60 60-256-256 256-256 60 60-196 196z"></path>
-            </svg>
-            <span className="home-text08">Previous</span>
-          </button>
-          <div className="home-pages">
-            <div className="home-primary">
-              <div className="home-number-current page-current page">
-                <span className="home-text09">1</span>
-              </div>
-              <div className="page">
-                <span className="home-text10">2</span>
-              </div>
-              <div className="page home-number1">
-                <span className="home-text11">3</span>
-              </div>
-            </div>
-            <img alt="image" src="/more.svg" className="home-more" />
-            <div className="home-max-number page">
-              <span className="home-text12">
-                <span>5</span>
-                <br></br>
-              </span>
-            </div>
-          </div>
-          <button className="home-next button-option button">
-            <span className="home-text15">Next</span>
-            <svg viewBox="0 0 1024 1024" className="home-icon16">
-              <path d="M426 256l256 256-256 256-60-60 196-196-196-196z"></path>
-            </svg>
-          </button>
-        </div>
+
       </section>
       <section id="how-it-works" className="home-new-user-create-account">
         <div className="home-highlight">
           <div className="home-content1">
             <div className="home-heading2">
               <h2 className="home-header2">New User? </h2>
-              <p className="home-caption1">Sign up for free!</p>
+              <h2 className="home-caption1">Login with Google!</h2>
             </div>
-            <button className="button-arrow button">
-
-            <Link to="/login-page">
-              <a href="#how-it-works" className="home-link08">
-                <span className="home-text16">Read more</span>
-                <br></br>
-              </a>
-            </Link>
-            
-            </button>
+            <a href="/login-page" className="search-button">
+                <h3>Login</h3>
+          </a>
           </div>
+
           <div className="home-image2">
             <div className="home-container5"></div>
             <div className="home-rectangle"></div>
           </div>
         </div>
+
       </section>
       <section id="explore" className="home-find-a-pharmacy">
       
@@ -261,13 +223,12 @@ const Home = (props) => {
             <div className="home-heading4">
               <h2 className="home-header4">Location</h2>
               <p className="home-caption3">
-              <Link to="/Locations">
-              <a href="#how-it-works" className="home-link08">
-                <button className="home-find button">Your Nearest Pharmacy </button>
-                <br></br>
+
+              <a href="#how-it-works" className='home-link08 search-button'>
+                <h3>Your Nearest Pharmacy</h3>
               </a>
-            </Link>
-                <br></br>
+
+
               </p>
             </div>
            
@@ -278,10 +239,10 @@ const Home = (props) => {
       <section id="about" className="home-about-us">
         <div className="home-heading5">
           <h2 className="home-header5">Meet Meditriever</h2>
-          <p className="home-caption4">The founders of Meditriever</p>
+          <h2 className="home-caption4">The founders of Meditriever</h2>
         </div>
-        <div className="home-list">
-          <div className="home-guide-wrapper">
+        <div className="home-offers">
+          <div className="home-offer-container">
             <Guide
               Name="Kenneth Tong"
               Location="Biology CMG, Computer Science 2025"
@@ -289,7 +250,7 @@ const Home = (props) => {
               rootClassName="guide-root-class-name9"
             ></Guide>
           </div>
-          <div className="home-guide-wrapper1">
+          <div className="home-offer-container">
             <Guide
               Name="Natalie Cheng"
               Location="Computer Science 2025"
@@ -297,7 +258,7 @@ const Home = (props) => {
               rootClassName="guide-root-class-name2"
             ></Guide>
           </div>
-          <div className="home-guide-wrapper2">
+          <div className="home-offer-container">
             <Guide
               Name="Aparna Singh"
               Location="Computer Science, 2025"
@@ -305,7 +266,7 @@ const Home = (props) => {
               rootClassName="guide-root-class-name"
             ></Guide>
           </div>
-          <div className="home-guide-wrapper3">
+          <div className="home-offer-container">
             <Guide
               Name="Katherine Zhang"
               Location="BMB 2025"
@@ -336,7 +297,7 @@ const Home = (props) => {
                       </span>
                       <br></br>
                     </a>
-                    <Link to="/fa-qs" className="home-navlink15">
+                    <Link href="/fa-qs.js" className="home-navlink15">
                       <span>
                         <font color="white">FAQs</font>
                       </span>

@@ -21,14 +21,16 @@
 .home-link05 h3,
 .home-link02 h2,
 .home-link04 h2,
-.home-link06 h2 {
-  line-height: -30; /* Adjust the value to vertically align the text */
+.home-link06 h2 
+.home-link08 h3{
+  line-height: 1.5; /* Adjust the value to vertically align the text */
 }
 
 
 .home-link01,
 .home-link03,
-.home-link05 {
+.home-link05,
+.home-link08 {
   text-align: center;
   display: block;
   position: relative;
@@ -339,6 +341,7 @@
   font-size: 90px;
   font-style: normal;
   text-align: center;
+  margin-right: 70px;
   font-family: "Cormorant Infant";
   font-weight: 700;
   line-height: 90px;
@@ -361,7 +364,7 @@
 }
 
 .home-border {
-  margin-top: 80px;
+  margin-bottom: 120px;
   right: 61px;
   width: 100%;
   border: 2px dashed rgba(120, 120, 120, 0.4);
@@ -530,6 +533,7 @@
   font-size: 60px;
   font-style: normal;
   text-align: center;
+  justify-content: center;
   font-family: "Cormorant Infant";
   font-weight: 700;
   line-height: 60px;
@@ -539,7 +543,6 @@
   display: grid;
   grid-gap: var(--dl-space-space-threeunits);
   align-items: center;
-  flex-direction: column;
   grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
 }
 .home-offer-container {
@@ -733,26 +736,30 @@
   justify-content: center;
 }
 .home-container5 {
+  margin-top: 40px;
   width: 511px;
   border: 2px dashed rgba(120, 120, 120, 0.4);
-  height: 677px;
+  height: 400px;
   display: flex;
   align-items: center;
   flex-direction: row;
   background-size: cover;
   justify-content: center;
+  border-radius: 8px; /* Add rounded corners */
   background-image: url("https://images.unsplash.com/photo-1504711331083-9c895941bf81?ixid=M3w5MTMyMXwwfDF8c2VhcmNofDN8fGluZm9ybWF0aW9ufGVufDB8fHx8MTcwMTEzOTAzMnww&ixlib=rb-4.0.3&w=1500");
   background-position: center;
 }
 .home-rectangle {
+  margin-top: 40px;
   right: -463px;
   width: 530px;
   border: 2px dashed rgba(120, 120, 120, 0.4);
   bottom: -25px;
-  height: 645px;
+  height: 400px;
   display: flex;
   position: absolute;
   align-items: center;
+  border-radius: 8px; /* Add rounded corners */
   flex-direction: row;
   justify-content: center;
   background-color: #1b9ce4;
@@ -1029,9 +1036,7 @@
   color: rgb(255, 255, 255);
   position: relative;
 }
-.home-link08 {
-  text-decoration: none;
-}
+
 .home-navlink15 {
   left: 0px;
   bottom: -27px;
