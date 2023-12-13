@@ -2,6 +2,7 @@ import os
 import requests
 from dotenv import load_dotenv
 from flask import Flask, jsonify, request
+from flask_cors import CORS
 from flask_sqlalchemy import SQLAlchemy
 
 db = SQLAlchemy()
@@ -10,7 +11,7 @@ db = SQLAlchemy()
 class User(db.Model):
     email = db.Column(db.String(120), primary_key=True, unique=True, nullable=False)
     username = db.Column(db.String(80), unique=True, nullable=False)
-    #date = db.Column(db.Integer, nullabele=False)
+    #date = db.Column(db.Integer, nullabele=False)df
     search_history = db.relationship('SearchHistory', backref='User', lazy=True)
 
 #stores user search history
@@ -21,6 +22,7 @@ class SearchHistory(db.Model):
 
 # #Initialize SQLAlchemy extension and configure database url
 app = Flask(__name__)
+CORS(app)
 app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///meditriever/src/UserData.db' #not sure if this is the correct path
 db = SQLAlchemy(app)
 
@@ -33,6 +35,10 @@ db = SQLAlchemy(app)
 '''
 Updating User Database
 '''
+
+@app.route('/test', methods=['GET'])
+def testFun():
+    return jsonify({'message':'poopy'})
 
 @app.route('/add_user', methods=['POST'])
 def add_user(username_input, email_input):
@@ -80,8 +86,8 @@ def add_data():
 FDA API + Google Maps API
 '''
 
-from src.FDADrugAPI import get_drug
-from src.GoogleMapsAPI import get_id
+from FDADrugAPI import get_drug
+from GoogleMapsAPI import get_id
 
 load_dotenv()
 
@@ -90,7 +96,7 @@ GOOGLE_MAPS_API_KEY = os.getenv("GOOGLE_MAPS_API_KEY")  # Remember .env file!
 
 # app = Flask(__name__)
 
-from src.FDADrugAPI import get_drug
+from FDADrugAPI import get_drug
 
 @app.route("/about-drug", methods=['POST'])
 def handle_user_data():
@@ -99,6 +105,7 @@ def handle_user_data():
         data = request.get_json()
         
         drug_name = data.get('drug')
+        print('drug_name: ' + drug_name)
         
         # Call get_drug function to retrieve drug information
         drug_data = get_drug(FDA_API_KEY, drug_name, 1)

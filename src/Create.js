@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 
-const Create = ({ drugName }) => {
+const Create = ({ drugName, onSubmit }) => {
   const [effects, setEffects] = useState('');
   const [companyName, setCompanyName] = useState('');
   const [contents, setContents] = useState('');
@@ -9,19 +9,16 @@ const Create = ({ drugName }) => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    const medicationData = { drugName, effects, companyName, contents, howTo };
+    const medicationData = { drugName, effects, companyName, contents, howTo, purpose };
+
+    console.log('Submitting medication data from Create:', medicationData);
 
     try {
-      const response = await fetch('http://localhost:3000/about-drug', {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-      },
-      body: JSON.stringify(medicationData),
-    });
-
-      const data = await response.json();
-      console.log('Data from the backend:', data);
+      // Send medicationData to the backend
+      if (onSubmit) {
+        await onSubmit(medicationData);
+        console.log("Send and works");
+      }
     } catch (error) {
       console.error('Error sending data to the backend:', error);
     }

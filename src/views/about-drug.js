@@ -2,6 +2,8 @@ import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 import Create from '../Create';
 
+const api = 'http://127.0.0.1:5000/'
+
 const AboutDrug = () => {
   const { drugName } = useParams();
   const [drugData, setDrugData] = useState(null);
@@ -16,20 +18,32 @@ const AboutDrug = () => {
 
         console.log('Name:', drugName);
 
-        // Construct the full URL
-        const apiUrl = `http://localhost:3000/about-drug/${drugName}`;
+        // test
+        const r = await fetch(api + 'test')
+
+        console.log(r)
+
+        var body = {
+          'drug':drugName
+        }
+      
+        const apiUrl = `${api}about-drug`;
         console.log('Request URL:', apiUrl);
+        console.log('data:', JSON.stringify(body))
+        const response = await fetch(apiUrl, {
+          method:'POST',
+          mode:'cors',
+          headers:{
+            'Content-type':'application/json'
+          },
+          body:JSON.stringify(body)
+        });
 
-        // Make the fetch request with GET method (assuming small data)
-        const response = await fetch(apiUrl);
-
-        // Check for HTTP error status
         if (!response.ok) {
           console.error('HTTP error! Status:', response.status);
           throw new Error(`HTTP error! Status: ${response.status}`);
         }
 
-        // Parse JSON response
         const data = await response.json();
         console.log('Parsed Data:', data);
 
