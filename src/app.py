@@ -125,7 +125,8 @@ def handle_user_data():
             'brand_name': company_name,
             'indications_and_usage': purpose,
             'inactive_ingredients': contents,
-            'dosage_and_administration': howTo
+            'dosage_and_administration': howTo,
+            'drug_data':drug_data
         }
         
         # Return the response as JSON
