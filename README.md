@@ -45,3 +45,5 @@ pip install --upgrade google-api-python-client
 
 npm install compression
 
+8. Install COR for Flask
+
