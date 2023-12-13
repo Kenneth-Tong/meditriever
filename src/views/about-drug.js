@@ -1,11 +1,9 @@
 import React, { useEffect, useState } from 'react';
-import { useParams } from 'react-router-dom'; // Import useParams
-
-import './about-drug.css';
-import Create from '../Create'; // Import Create component
+import { useParams } from 'react-router-dom';
+import Create from '../Create';
 
 const AboutDrug = () => {
-  const { drugName } = useParams(); // Use useParams to get drugName from URL
+  const { drugName } = useParams();
   const [drugData, setDrugData] = useState(null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
@@ -16,10 +14,25 @@ const AboutDrug = () => {
         setLoading(true);
         setError(null);
 
-        const response = await fetch(`http://localhost:3000/about-drug/${drugName}`);
-        const data = await response.json();
+        console.log('Name:', drugName);
 
-        console.log('Data from the backend in AboutDrug component:', data);
+        // Construct the full URL
+        const apiUrl = `http://localhost:3000/about-drug/${drugName}`;
+        console.log('Request URL:', apiUrl);
+
+        // Make the fetch request with GET method (assuming small data)
+        const response = await fetch(apiUrl);
+
+        // Check for HTTP error status
+        if (!response.ok) {
+          console.error('HTTP error! Status:', response.status);
+          throw new Error(`HTTP error! Status: ${response.status}`);
+        }
+
+        // Parse JSON response
+        const data = await response.json();
+        console.log('Parsed Data:', data);
+
         setDrugData(data);
       } catch (error) {
         console.error('Error fetching data from the backend:', error);

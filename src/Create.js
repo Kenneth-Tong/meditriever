@@ -13,12 +13,12 @@ const Create = ({ drugName }) => {
 
     try {
       const response = await fetch('http://localhost:3000/about-drug', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify(medicationData),
-      });
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify(medicationData),
+    });
 
       const data = await response.json();
       console.log('Data from the backend:', data);

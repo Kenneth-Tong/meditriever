@@ -41,4 +41,7 @@ npm install --save react-helmet
 
 pip install --upgrade google-api-python-client
 
+7. Install compression for HTTP
+
+npm install compression
 

@@ -122,7 +122,8 @@ def handle_user_data():
         }
         
         # Return the response as JSON
-        return jsonify(response_data)
+        return jsonify(response_data), 200, {'Content-Type': 'application/json'}
+
 
 
 @app.route("/location")
