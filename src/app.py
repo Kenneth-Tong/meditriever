@@ -5,6 +5,8 @@ from flask import Flask, jsonify, request
 from flask_cors import CORS
 from flask_sqlalchemy import SQLAlchemy
 
+#Start with two terminal, one with npm start and another for back end python -m flask run
+
 db = SQLAlchemy()
 
 #User class that maps to data table in db
