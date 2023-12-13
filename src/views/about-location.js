@@ -1,16 +1,61 @@
 import React, { useEffect, useState } from 'react';
 import { useParams, Link } from 'react-router-dom';
-import Create from '../Create';  //LOAD CODE FOR LOCATIONS HERE
+import CreateLocation from '../CreateLocation';  //LOAD CODE FOR LOCATIONS HERE
 
 const api = 'http://127.0.0.1:5000/'
 
-const Locations = () => {
+const AboutLocation = () => {
+  const { locationName } = useParams();
+  const [locationData, setDrugData] = useState(null);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState(null);
 
-  //HAVE LOCATION CONSTANTS HERE
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        setLoading(true);
+        setError(null);
+
+        console.log('Location:', locationName);
+
+        var body = {
+          'location':locationName
+        }
+      
+        const apiUrl = `${api}Locations`;
+        console.log('Request URL:', apiUrl);
+        console.log('data:', JSON.stringify(body))
+        const response = await fetch(apiUrl, {
+          method:'POST',
+          mode:'cors',
+          headers:{
+            'Content-type':'application/json'
+          },
+          body:JSON.stringify(body)
+        });
+
+        if (!response.ok) {
+          console.error('HTTP error! Status:', response.status);
+          throw new Error(`HTTP error! Status: ${response.status}`);
+        }
+
+        const data = await response.json();
+        console.log('Parsed Data:', data);
+
+        setDrugData(data);
+      } catch (error) {
+        console.error('Error fetching data from the backend:', error);
+        setError('Error fetching data. Please try again.');
+      } finally {
+        setLoading(false);
+      }
+    };
+
+    fetchData();
+  }, []);
   
   return (
-    <div className="about-drug">
-
+    <div className="Locations">
       <header data-thq="thq-navbar" className="home-navbar">
       <div className="home-container1">
         <div data-thq="thq-navbar-nav" className="home-desktop-menu">
@@ -92,10 +137,19 @@ const Locations = () => {
       </div>
       </header>
 
-      <h1>Location</h1>
+      <h1>Find Location</h1>
+      {loading && <p>Loading...</p>}
+      {error && <p style={{ color: 'red' }}>{error}</p>}
+      {locationData && (
         <div>
-         You are in Boston.
+          <p>Location Name: {locationData.location_name}</p>
+          <p>Address: {locationData.address}</p>
+          <p>Times: {locationData.times}</p>
+
+          {/* Pass drugName to CreateLocation component */}
+          <CreateLocation locationName={locationName} />
         </div>
+      )}
 
       <section className="home-footer">
         <div className="home-content3">
@@ -159,4 +213,4 @@ const Locations = () => {
   );
 }
 
-export default Locations;
+export default AboutLocation;
