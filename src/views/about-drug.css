@@ -19,11 +19,6 @@
   padding-right: 20px; /* Adjust spacing between main and side info */
 }
 
-.text-border {
-  border-bottom: 2px solid #1b9ce4; /* Replace with your theme color */
-  padding-bottom: 5px;
-}
-
 .side-info {
   flex: 1;
   display: flex;
@@ -31,9 +26,14 @@
 }
 
 .info-box {
-  border: 1px solid #1b9ce4; /* Replace with your theme color */
+  border: 5px solid #1b9ce4; /* Replace with your theme color */
   padding: 10px;
   margin-bottom: 10px; /* Adjust spacing between info boxes */
+  border-radius: 8px;
+}
+
+.text-color h2 {
+  color: #1b9ce4;
 }
 
 .home-go-to-top {
