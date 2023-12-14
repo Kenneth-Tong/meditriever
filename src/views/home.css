@@ -503,15 +503,14 @@
 .home-popular-prescriptions {
   gap: var(--dl-space-space-fourunits);
   width: 100%;
+  max-width: 1200px; /* Adjust as needed */
   display: flex;
-  max-width: 1440px;
   align-items: center;
-  padding-top: 120px;
-  padding-left: var(--dl-space-space-fiveunits);
-  padding-right: var(--dl-space-space-fiveunits);
-  flex-direction: column;
-  padding-bottom: 120px;
+  justify-content: center; /* Center items horizontally */
+  padding: 120px var(--dl-space-space-fiveunits);
+  flex-direction: row; /* Display items in a row */
 }
+
 .home-main {
   gap: var(--dl-space-space-fiveunits);
   width: 100%;
@@ -539,11 +538,12 @@
   line-height: 60px;
 }
 .home-offers {
+  gap: var(--dl-space-space-threeunits);
   width: 100%;
-  display: grid;
-  grid-gap: var(--dl-space-space-threeunits);
+  display: flex;
   align-items: center;
-  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  justify-content: center;
+  flex-direction: row; /* Update this line to make it horizontal */
 }
 .home-offer-container {
   width: 100%;
@@ -1141,8 +1141,14 @@
     padding-bottom: var(--dl-space-space-fourunits);
   }
   .home-offers {
-    grid-template-columns: auto auto;
+    gap: var(--dl-space-space-threeunits);
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row; /* Update this line to make it horizontal */
   }
+  
   .home-new-user-create-account {
     gap: 135px;
     align-items: flex-start;
