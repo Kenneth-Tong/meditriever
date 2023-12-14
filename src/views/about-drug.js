@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { useParams, Link } from 'react-router-dom';
+import CreateDrug from '../Create'
 
 const api = 'http://127.0.0.1:5000/'
 
@@ -184,10 +185,7 @@ const AboutDrug = () => {
              <h4>{drugData.dosage_and_administration}</h4>
            </div>
          </div>
-     
-       {/* Pass drugName to CreateDrug component */}
-       <AboutDrug drugName={drugName} />
-     </div>
+         </div>
       )}
 
 <section className="home-footer">

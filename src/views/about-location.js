@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { useParams, Link } from 'react-router-dom';
+import CreateLocation from '../Create'
 
 const api = 'http://127.0.0.1:5000/'
 
@@ -57,7 +58,7 @@ const AboutLocation = () => {
     };
 
     fetchData();
-  }, []);
+  }, [locationName]);
   
   return (
     <div className="about-location">
@@ -146,12 +147,9 @@ const AboutLocation = () => {
       {error && <p style={{ color: 'red' }}>{error}</p>}
       {locationData && (
         <div>
-          <p>Location Name: {locationData.location_name}</p>
+          <p>Location Name: {locationData.name}</p>         
           <p>Address: {locationData.address}</p>
           <p>Times: {locationData.times}</p>
-
-          {/* Pass locationName to CreateLocation component */}
-          <AboutLocation locationName={locationName} />
         </div>
       )}
 

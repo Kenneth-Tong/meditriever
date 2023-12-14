@@ -91,7 +91,7 @@ FDA API + Google Maps API
 '''
 
 from FDADrugAPI import get_drug, get_form, get_patient_drug_reaction
-from GoogleMapsAPI import get_id, get_place, get_times
+from GoogleMapsAPI import get_id, get_location, get_nearby, get_place, get_times
 
 load_dotenv()
 
@@ -215,6 +215,24 @@ def handle_user_data_drug():
         # Return the response as JSON
         return jsonify(response_data), 200, {'Content-Type': 'application/json'}
 
+def reformat_string(list_input, term):
+    results = list_input[term]
+    return results
+
+def compile_hours_list(list_input, time):  # weekdays versus weekends
+    compiled_list = list()
+    for i in range(time - 1):
+        day_times = list_input[i]
+        day_times_list = ""
+        for a in range(len(day_times)):
+            if day_times[a] == "'\'":
+                day_times_list = day_times_list + " "
+                a += 6
+            day_times_list = day_times_list + day_times[a]
+        print(day_times_list)
+        compiled_list.append(day_times_list)
+    return compiled_list
+
 @app.route("/about-location", methods=['POST'])
 def handle_user_data_location():
     if request.method == 'POST':
@@ -224,20 +242,21 @@ def handle_user_data_location():
         location_name = data_location.get('location')
         
         # Call get_drug function to retrieve drug information
-        location_id = get_id(GOOGLE_MAPS_API_KEY, location_name)
+        location_id = reformat_string(get_id(GOOGLE_MAPS_API_KEY, location_name)["candidates"][0], "place_id")
+        place_id = get_place(GOOGLE_MAPS_API_KEY, location_id)
 
-        print(location_id, file=sys.stderr)
+        address = reformat_string(place_id["result"], "formatted_address")      
 
-        address = get_place(GOOGLE_MAPS_API_KEY, location_id)
-        times = get_times(GOOGLE_MAPS_API_KEY, location_id)
+        place_times = get_times(GOOGLE_MAPS_API_KEY, location_id)
+        place_times_list = compile_hours_list(place_times["result"]["current_opening_hours"]["weekday_text"], 7)  
         
         # Perform any necessary backend processing with the received data
         response_data = {
             'message': 'Data received successfully!',
             'name': location_name,
             'address': address,
-            'times': times,
-            'location_data': location_id
+            'times': place_times_list,
+            'location_data': place_id
         }
         
         # Return the response as JSON
