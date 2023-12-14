@@ -148,14 +148,29 @@ const AboutDrug = () => {
       {error && <p style={{ color: 'red' }}>{error}</p>}
       {drugData && (
         <div>
-          <p>Generic Name: {drugData.generic_name}</p>
-          <p>Brand Name: {drugData.brand_name}</p>
-          <p>Purpose for Taking: {drugData.purpose}</p>
-          <p>Active Ingredients: {drugData.active_ingredients}</p>
-          <p>Warnings: {drugData.warnings}</p>
-          <p>Possible Reactions: {drugData.reactions}</p>
-          <p>Drug Interactions: {drugData.interactions}</p>
-          <p>Dosage and Administration: {drugData.dosage_and_administration}</p>
+          <h3 className='text-border'>Generic Name: </h3>
+            <h2>{drugData.generic_name}</h2>
+
+          <h3>Brand Name: </h3>
+            <h2>{drugData.brand_name}</h2>
+
+          <h3>Purpose for Taking: </h3>
+            <h2>{drugData.purpose}</h2>
+
+          <h3>Active Ingredients: </h3>
+            <h2>{drugData.active_ingredients}</h2>
+
+          <h3>Warnings: </h3>
+            <h2>{drugData.warnings}</h2>
+
+          <h3>Possible Reactions: </h3>
+            <h2>{drugData.reactions}</h2>
+
+          <h3>Drug Interactions: </h3>
+            <h2>{drugData.interactions}</h2>
+
+          <h3>Dosage and Administration: </h3>
+            <h2>{drugData.dosage_and_administration}</h2>
 
           {/* Pass drugName to CreateDrug component */}
           <CreateDrug drugName={drugName} />
