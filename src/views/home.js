@@ -5,9 +5,18 @@ import Script from 'react-dangerous-html'
 
 import Offer from '../components/Offer'
 import Guide from '../components/Guide'
+import AboutDrug from './about-drug'
+import handleLogin from './login-page'
 import './home.css'
 
 const Home = (props) => {
+
+  function nameDrug(){
+    let userInput = document.querySelector("#userInput");
+    {/* Pass userInput to AboutDrug component */}
+    <AboutDrug drugName={userInput} />
+    }
+
   return (
     <div className="home-container">
       <a href="#name" className="home-link">
@@ -118,16 +127,23 @@ const Home = (props) => {
                 </h3>
               </div>
               <input
+                id = "userInput"
                 type="text"
                 placeholder="Search a medication"
                 className="home-textinput input"
               />
-              <button name="Search" type="button" className="search-button">
+              <button
+                name="Search"
+                type="button"
+                className="search-button"
+                onClick={handleLogin} 
+              >
                 <span>
                   <span>Search</span>
                   <br></br>
                 </span>
               </button>
+
               <div className="home-container4">
                 <div className="home-explore">
                   <a href="#new" className="home-link01 button">

@@ -2,6 +2,8 @@ import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import Login from '../components/login'; // Import the Login component
 import Logout from '../components/logout'; //Import the Logout component
+import useGoogleOAuth from './useGoogleOAuth'; //Import Login Hook
+import AboutDrug from './about-drug'
 
 import Script from 'react-dangerous-html';
 import { Helmet } from 'react-helmet';
@@ -17,9 +19,16 @@ function LoginPage() {
 
   const [username, setUsername] = useState('');
   const [email, setEmail] = useState('');
+  const { isAuthenticated, user, login, logout } = useGoogleOAuth();
  
   //handleLogin funtion to send a POST request to the Flask server with the user data
   const handleLogin = () => {
+    function nameDrug(){
+      let userInput = document.querySelector("#userInput");
+      {/* Pass userInput to AboutDrug component */}
+      <AboutDrug drugName={userInput} />
+      }
+
     // Prepare the user data to send to the server
     const userData = {
       username: username,
@@ -29,6 +38,7 @@ function LoginPage() {
     // Make a POST request to Flask server
     fetch('/add_user', {
       method: 'POST',
+      mode:'cors',
       headers: {
         'Content-Type': 'application/json',
       },
@@ -41,7 +51,31 @@ function LoginPage() {
       .catch(error => {
         console.error('Error:', error);
       });
+
+    // Send the search entry to Flask server
+  const searchEntry = 'userInput'
+  const searchUserData = {
+    email: email, // Assuming you have the user's email
+    user_search_input: searchEntry,
   };
+
+  fetch('/add_search', {
+    method: 'POST',
+    mode: 'cors',
+    headers: {
+      'Content-Type': 'application/json',
+    },
+    body: JSON.stringify(searchUserData),
+  })
+    .then(response => response.json())
+    .then(data => {
+      console.log(data.message); // Handle the response from the server
+    })
+    .catch(error => {
+      console.error('Error:', error);
+    });
+};
+
 
   //for login successes and failures
   useEffect(() => {
@@ -104,16 +138,36 @@ function LoginPage() {
               value={email}
               onChange={e => setEmail(e.target.value)}
             />
-            <button onClick={handleLogin}>Login</button>
+            <button onClick={handleLogin}> <Link to = '/'> Login </Link> </button>
+              
           </div>
           
+          <div>
+            {isAuthenticated ? (
+              <div>
+                <p>Welcome, {user.name}!</p>
+                <button onClick={logout}>Logout</button>
+              </div>
+            ) : (
+              <button onClick={login}>Login with Google</button>
+            )}
+          </div>
+    
           <div class="col s12 m6 offset-m3 center-align">
-            <Login />
+            {isAuthenticated ? (
+              <div>
+                <p>Welcome, {user.name}!</p>
+                <button onClick={logout}>Logout</button>
+              </div>
+            ) : (
+                <button onClick={login}>Login with Google</button>
+            )}
+            
             <Logout />
           </div>
           <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/css/materialize.min.css"></link>
           <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/js/materialize.min.js"></script>
-          
+            
         </div>
       </section>
       <section className="home-footer">
