@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from 'react';
 import { useParams, Link } from 'react-router-dom';
-import CreateDrug from '../CreateDrug';
 
 const api = 'http://127.0.0.1:5000/'
 
@@ -27,10 +26,10 @@ const AboutDrug = () => {
           'drug': drugName
         }
       
-        const apiUrl = `${api}about-drug`;
-        console.log('Request URL:', apiUrl);
+        const apiUrlDrug = `${api}about-drug`;
+        console.log('Request URL:', apiUrlDrug);
         console.log('data:', JSON.stringify(body))
-        const response = await fetch(apiUrl, {
+        const response_drug = await fetch(apiUrlDrug, {
           method:'POST',
           mode:'cors',
           headers:{
@@ -39,12 +38,12 @@ const AboutDrug = () => {
           body:JSON.stringify(body)
         });
 
-        if (!response.ok) {
-          console.error('HTTP error! Status:', response.status);
-          throw new Error(`HTTP error! Status: ${response.status}`);
+        if (!response_drug.ok) {
+          console.error('HTTP error! Status:', response_drug.status);
+          throw new Error(`HTTP error! Status: ${response_drug.status}`);
         }
 
-        const data = await response.json();
+        const data = await response_drug.json();
         console.log('Parsed Data:', data);
 
         setDrugData(data);
@@ -147,49 +146,48 @@ const AboutDrug = () => {
       {loading && <p>Loading...</p>}
       {error && <p style={{ color: 'red' }}>{error}</p>}
       {drugData && (
-        <div className="drug-info-container">
-          <div className="main-info">
-            <h2 className="text-border">Generic Name:</h2>
-            <h4>{drugData.generic_name}</h4>
-        
-            <h2>Brand Name:</h2>
-            <h4>{drugData.brand_name}</h4>
-        
-            <h2>Purpose for Taking:</h2>
-            <h4>{drugData.purpose}</h4>
-          </div>
-        
-          <div className="side-info">
-            <div className="info-box">
-              <h2>Active Ingredients:</h2>
-              <h4>{drugData.active_ingredients}</h4>
-            </div>
-        
-            <div className="info-box">
-              <h2>Warnings:</h2>
-              <h4>{drugData.warnings}</h4>
-            </div>
-        
-            <div className="info-box">
-              <h2>Possible Reactions:</h2>
-              <h4>{drugData.reactions}</h4>
-            </div>
-        
-            <div className="info-box">
-              <h2>Drug Interactions:</h2>
-              <h4>{drugData.interactions}</h4>
-            </div>
-        
-            <div className="info-box">
-              <h2>Dosage and Administration:</h2>
-              <h4>{drugData.dosage_and_administration}</h4>
-            </div>
-          </div>
-      
-        {/* Pass drugName to CreateDrug component */}
-        <CreateDrug drugName={drugName} />
-      </div>
-      
+         <div className="drug-info-container">
+         <div className="main-info">
+           <h2 className="text-border">Generic Name:</h2>
+           <h4>{drugData.generic_name}</h4>
+       
+           <h2>Brand Name:</h2>
+           <h4>{drugData.brand_name}</h4>
+       
+           <h2>Purpose for Taking:</h2>
+           <h4>{drugData.purpose}</h4>
+         </div>
+       
+         <div className="side-info">
+           <div className="info-box">
+             <h2>Active Ingredients:</h2>
+             <h4>{drugData.active_ingredients}</h4>
+           </div>
+       
+           <div className="info-box">
+             <h2>Warnings:</h2>
+             <h4>{drugData.warnings}</h4>
+           </div>
+       
+           <div className="info-box">
+             <h2>Possible Reactions:</h2>
+             <h4>{drugData.reactions}</h4>
+           </div>
+       
+           <div className="info-box">
+             <h2>Drug Interactions:</h2>
+             <h4>{drugData.interactions}</h4>
+           </div>
+       
+           <div className="info-box">
+             <h2>Dosage and Administration:</h2>
+             <h4>{drugData.dosage_and_administration}</h4>
+           </div>
+         </div>
+     
+       {/* Pass drugName to CreateDrug component */}
+       <AboutDrug drugName={drugName} />
+     </div>
       )}
 
 <section className="home-footer">

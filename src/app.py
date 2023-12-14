@@ -91,7 +91,7 @@ FDA API + Google Maps API
 '''
 
 from FDADrugAPI import get_drug, get_form, get_patient_drug_reaction
-from GoogleMapsAPI import get_id, get_location, get_times
+from GoogleMapsAPI import get_id, get_place, get_times
 
 load_dotenv()
 
@@ -224,10 +224,12 @@ def handle_user_data_location():
         location_name = data_location.get('location')
         
         # Call get_drug function to retrieve drug information
-        location_data = get_id(GOOGLE_MAPS_API_KEY, location_name)
+        location_id = get_id(GOOGLE_MAPS_API_KEY, location_name)
 
-        address = get_location(GOOGLE_MAPS_API_KEY, location_name)
-        times = get_times(GOOGLE_MAPS_API_KEY, location_name)
+        print(location_id, file=sys.stderr)
+
+        address = get_place(GOOGLE_MAPS_API_KEY, location_id)
+        times = get_times(GOOGLE_MAPS_API_KEY, location_id)
         
         # Perform any necessary backend processing with the received data
         response_data = {
@@ -235,7 +237,7 @@ def handle_user_data_location():
             'name': location_name,
             'address': address,
             'times': times,
-            'location_data': location_data
+            'location_data': location_id
         }
         
         # Return the response as JSON

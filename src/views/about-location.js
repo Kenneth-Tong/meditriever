@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from 'react';
 import { useParams, Link } from 'react-router-dom';
-import CreateLocation from '../CreateLocation';  //LOAD CODE FOR LOCATIONS HERE
 
 const api = 'http://127.0.0.1:5000/'
 
@@ -16,16 +15,22 @@ const AboutLocation = () => {
         setLoading(true);
         setError(null);
 
+        // test
+        const r = await fetch(api + 'test')
+
+        console.log(r)
+
         console.log('Location:', locationName);
 
         var body = {
           'location':locationName
         }
       
-        const apiUrl = `${api}about-location`;
-        console.log('Request URL:', apiUrl);
+        const apiUrlLocation = `${api}about-location`;
+        console.log('Request URL:', apiUrlLocation);
         console.log('data:', JSON.stringify(body))
-        const response = await fetch(apiUrl, {
+
+        const response_location = await fetch(apiUrlLocation, {
           method:'POST',
           mode:'cors',
           headers:{
@@ -34,12 +39,12 @@ const AboutLocation = () => {
           body:JSON.stringify(body)
         });
 
-        if (!response.ok) {
-          console.error('HTTP error! Status:', response.status);
-          throw new Error(`HTTP error! Status: ${response.status}`);
+        if (!response_location.ok) {
+          console.error('HTTP error! Status:', response_location.status);
+          throw new Error(`HTTP error! Status: ${response_location.status}`);
         }
 
-        const data = await response.json();
+        const data = await response_location.json();
         console.log('Parsed Data:', data);
 
         setLocationData(data);
@@ -146,7 +151,7 @@ const AboutLocation = () => {
           <p>Times: {locationData.times}</p>
 
           {/* Pass locationName to CreateLocation component */}
-          <CreateLocation locationName={locationName} />
+          <AboutLocation locationName={locationName} />
         </div>
       )}
 
