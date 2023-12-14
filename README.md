@@ -3,6 +3,8 @@ Designed to take in user prescriptions and return a symptoms list using the FDA 
 
 CS411 Project Fall 2023
 
+You can watch a demo video here: https://youtu.be/qZMwf0tydwQ
+
 # Group Members
 Kenneth Tong, Natalie Cheng, Katherine Zhang, Aparna Singh
 
