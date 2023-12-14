@@ -204,7 +204,7 @@ const Home = (props) => {
           </div>
         </div>
         <div className="home-offers">
-          <Link to="/Locations/CVS">
+          <Link to="/about-location/CVS">
             <div className="home-offer-container">
               <Offer
                 Image="/Highlights/CVS.png"
@@ -213,7 +213,7 @@ const Home = (props) => {
               ></Offer>
             </div>
           </Link>
-          <Link to="/Locations/Walgreens">
+          <Link to="/about-location/Walgreens">
             <div className="home-offer-container">
               <Offer
                 Image="/Highlights/Walgreens.png"
@@ -245,25 +245,6 @@ const Home = (props) => {
 
       </section>
       <section id="explore" className="home-find-a-pharmacy">
-      
-
-        <div className="home-highlight1">
-          <div className="home-content2">
-            <div className="home-heading4">
-              <h2 className="home-header4">Location</h2>
-              <p className="home-caption3">
-
-              <a href="#how-it-works" className='home-link08 search-button'>
-                <h3>Your Nearest Pharmacy</h3>
-              </a>
-
-
-              </p>
-            </div>
-           
-            
-          </div>
-        </div>
       </section>
       <section id="about" className="home-about-us">
         <div className="home-heading5">

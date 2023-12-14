@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { useParams, Link } from 'react-router-dom';
-import Create from '../Create';
+import CreateDrug from '../CreateDrug';
 
 const api = 'http://127.0.0.1:5000/'
 
@@ -24,7 +24,7 @@ const AboutDrug = () => {
         console.log(r)
 
         var body = {
-          'drug':drugName
+          'drug': drugName
         }
       
         const apiUrl = `${api}about-drug`;
@@ -157,8 +157,8 @@ const AboutDrug = () => {
           <p>Drug Interactions: {drugData.interactions}</p>
           <p>Dosage and Administration: {drugData.dosage_and_administration}</p>
 
-          {/* Pass drugName to Create component */}
-          <Create drugName={drugName} />
+          {/* Pass drugName to CreateDrug component */}
+          <CreateDrug drugName={drugName} />
         </div>
       )}
 

@@ -91,7 +91,7 @@ FDA API + Google Maps API
 '''
 
 from FDADrugAPI import get_drug, get_form, get_patient_drug_reaction
-from GoogleMapsAPI import get_id
+from GoogleMapsAPI import get_id, get_location, get_times
 
 load_dotenv()
 
@@ -114,7 +114,7 @@ def api_response():
         return jsonify(**request.json)
 
 @app.route("/about-drug", methods=['POST'])
-def handle_user_data():
+def handle_user_data_drug():
     if request.method == 'POST':
         # Get the data from the JSON body of the request
         data = request.get_json()
@@ -215,9 +215,31 @@ def handle_user_data():
         # Return the response as JSON
         return jsonify(response_data), 200, {'Content-Type': 'application/json'}
 
-@app.route("/location")
-def app_get_id(location):
-    return get_id(GOOGLE_MAPS_API_KEY, location)
+@app.route("/about-location", methods=['POST'])
+def handle_user_data_location():
+    if request.method == 'POST':
+        # Get the data from the JSON body of the request
+        data_location = request.get_json()
+
+        location_name = data_location.get('location')
+        
+        # Call get_drug function to retrieve drug information
+        location_data = get_id(GOOGLE_MAPS_API_KEY, location_name)
+
+        address = get_location(GOOGLE_MAPS_API_KEY, location_name)
+        times = get_times(GOOGLE_MAPS_API_KEY, location_name)
+        
+        # Perform any necessary backend processing with the received data
+        response_data = {
+            'message': 'Data received successfully!',
+            'name': location_name,
+            'address': address,
+            'times': times,
+            'location_data': location_data
+        }
+        
+        # Return the response as JSON
+        return jsonify(response_data), 200, {'Content-Type': 'application/json'}
 
 if __name__ == "__main__":
     app.run(port=3000)
