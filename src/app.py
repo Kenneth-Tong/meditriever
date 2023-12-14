@@ -229,8 +229,7 @@ def compile_hours_list(list_input, time):  # weekdays versus weekends
                 day_times_list = day_times_list + " "
                 a += 6
             day_times_list = day_times_list + day_times[a]
-        print(day_times_list)
-        compiled_list.append(day_times_list)
+        compiled_list.append(day_times_list + " | ")
     return compiled_list
 
 @app.route("/about-location", methods=['POST'])
