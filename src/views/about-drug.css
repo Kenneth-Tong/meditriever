@@ -9,6 +9,12 @@
   .home-link {
     display: contents;
   }
+
+.text-border {
+  border-radius: 20px solid;  
+  color: #1b9ce4;
+}
+
   .home-go-to-top {
     flex: 0 0 auto;
     right: 50px;
