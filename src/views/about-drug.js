@@ -147,34 +147,49 @@ const AboutDrug = () => {
       {loading && <p>Loading...</p>}
       {error && <p style={{ color: 'red' }}>{error}</p>}
       {drugData && (
-        <div>
-          <h3 className='text-border'>Generic Name: </h3>
-            <h2>{drugData.generic_name}</h2>
-
-          <h3>Brand Name: </h3>
-            <h2>{drugData.brand_name}</h2>
-
-          <h3>Purpose for Taking: </h3>
-            <h2>{drugData.purpose}</h2>
-
-          <h3>Active Ingredients: </h3>
-            <h2>{drugData.active_ingredients}</h2>
-
-          <h3>Warnings: </h3>
-            <h2>{drugData.warnings}</h2>
-
-          <h3>Possible Reactions: </h3>
-            <h2>{drugData.reactions}</h2>
-
-          <h3>Drug Interactions: </h3>
-            <h2>{drugData.interactions}</h2>
-
-          <h3>Dosage and Administration: </h3>
-            <h2>{drugData.dosage_and_administration}</h2>
-
-          {/* Pass drugName to CreateDrug component */}
-          <CreateDrug drugName={drugName} />
-        </div>
+        <div className="drug-info-container">
+          <div className="main-info">
+            <h2 className="text-border">Generic Name:</h2>
+            <h4>{drugData.generic_name}</h4>
+        
+            <h2>Brand Name:</h2>
+            <h4>{drugData.brand_name}</h4>
+        
+            <h2>Purpose for Taking:</h2>
+            <h4>{drugData.purpose}</h4>
+          </div>
+        
+          <div className="side-info">
+            <div className="info-box">
+              <h2>Active Ingredients:</h2>
+              <h4>{drugData.active_ingredients}</h4>
+            </div>
+        
+            <div className="info-box">
+              <h2>Warnings:</h2>
+              <h4>{drugData.warnings}</h4>
+            </div>
+        
+            <div className="info-box">
+              <h2>Possible Reactions:</h2>
+              <h4>{drugData.reactions}</h4>
+            </div>
+        
+            <div className="info-box">
+              <h2>Drug Interactions:</h2>
+              <h4>{drugData.interactions}</h4>
+            </div>
+        
+            <div className="info-box">
+              <h2>Dosage and Administration:</h2>
+              <h4>{drugData.dosage_and_administration}</h4>
+            </div>
+          </div>
+      
+        {/* Pass drugName to CreateDrug component */}
+        <CreateDrug drugName={drugName} />
+      </div>
+      
       )}
 
 <section className="home-footer">
