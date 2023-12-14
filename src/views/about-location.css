@@ -9,6 +9,36 @@
   .home-link {
     display: contents;
   }
+
+
+  .drug-info-container {
+    display: flex;
+    }
+    
+    .main-info {
+    flex: 1;
+    padding-right: 40px; /* Adjust spacing between main and side info */
+    }
+    
+    .side-info {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    padding-left: 30px;
+    }
+    
+    .info-box {
+    border: 5px solid #1b9ce4; /* Replace with your theme color */
+    padding: 10px;
+    margin-bottom: 10px; /* Adjust spacing between info boxes */
+    border-radius: 8px;
+    }
+    
+    .text-color {
+    color: #1b9ce4;
+    }
+    
+
   .home-go-to-top {
     flex: 0 0 auto;
     right: 50px;

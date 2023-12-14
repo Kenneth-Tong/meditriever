@@ -146,10 +146,23 @@ const AboutLocation = () => {
       {loading && <p>Loading...</p>}
       {error && <p style={{ color: 'red' }}>{error}</p>}
       {locationData && (
-        <div>
-          <p>Location Name: {locationData.name}</p>         
-          <p>Address: {locationData.address}</p>
-          <p>Times: {locationData.times}</p>
+        <div className="drug-info-container">
+          <div className="side-info">
+            <div className="side-info info-box">
+              <h2 className="text-color">Location Name: </h2>
+              <h4>{locationData.name}</h4>
+            </div>       
+            <div className="side-info info-box">
+              <h2 className="text-color">Address: </h2>
+              <h4>{locationData.address}</h4>
+            </div>
+            <div className="side-info info-box">
+              <h2 className="text-color">Times: </h2>
+              <h4>{locationData.times}</h4>
+            </div>
+
+          </div>
+          
         </div>
       )}
 

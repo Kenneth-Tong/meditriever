@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { useParams, Link } from 'react-router-dom';
-import CreateDrug from '../Create'
+import './about-drug.css';
 
 const api = 'http://127.0.0.1:5000/'
 
@@ -147,45 +147,49 @@ const AboutDrug = () => {
       {loading && <p>Loading...</p>}
       {error && <p style={{ color: 'red' }}>{error}</p>}
       {drugData && (
-         <div className="drug-info-container">
-         <div className="main-info">
-           <h2 className="text-border">Generic Name:</h2>
-           <h4>{drugData.generic_name}</h4>
-       
-           <h2>Brand Name:</h2>
-           <h4>{drugData.brand_name}</h4>
-       
-           <h2>Purpose for Taking:</h2>
-           <h4>{drugData.purpose}</h4>
-         </div>
-       
-         <div className="side-info">
-           <div className="info-box">
-             <h2>Active Ingredients:</h2>
-             <h4>{drugData.active_ingredients}</h4>
-           </div>
-       
-           <div className="info-box">
-             <h2>Warnings:</h2>
-             <h4>{drugData.warnings}</h4>
-           </div>
-       
-           <div className="info-box">
-             <h2>Possible Reactions:</h2>
-             <h4>{drugData.reactions}</h4>
-           </div>
-       
-           <div className="info-box">
-             <h2>Drug Interactions:</h2>
-             <h4>{drugData.interactions}</h4>
-           </div>
-       
-           <div className="info-box">
-             <h2>Dosage and Administration:</h2>
-             <h4>{drugData.dosage_and_administration}</h4>
-           </div>
-         </div>
-         </div>
+        <div className="drug-info-container">
+          <div className="main-info info-box">
+            <h2 className="text-color">Generic Name:</h2>
+            <h4>{drugData.generic_name}</h4>
+        
+            <h2 className="text-color">Brand Name:</h2>
+            <h4>{drugData.brand_name}</h4>
+        
+            <h2 className="text-color">Purpose for Taking:</h2>
+            <h4>{drugData.purpose}</h4>
+          </div>
+        
+          <div className="side-info">
+            <div className="info-box">
+              <h2 className="text-color">Active Ingredients:</h2>
+              <h4>{drugData.active_ingredients}</h4>
+            </div>
+        
+            <div className="info-box">
+              <h2 className="text-color">Warnings:</h2>
+              <h4>{drugData.warnings}</h4>
+            </div>
+        
+            <div className="info-box">
+              <h2 className="text-color">Possible Reactions:</h2>
+              <h4>{drugData.reactions}</h4>
+            </div>
+        
+            <div className="info-box">
+              <h2 className="text-color">Drug Interactions:</h2>
+              <h4>{drugData.interactions}</h4>
+            </div>
+        
+            <div className="info-box">
+              <h2 className="text-color">Dosage and Administration:</h2>
+              <h4>{drugData.dosage_and_administration}</h4>
+            </div>
+          </div>
+      
+        {/* Pass drugName to CreateDrug component */}
+        {/* <AboutDrug drugName={drugName} /> */}
+      </div>
+      
       )}
 
 <section className="home-footer">
@@ -251,3 +255,4 @@ const AboutDrug = () => {
 }
 
 export default AboutDrug;
+
